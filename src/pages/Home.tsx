@@ -1,4 +1,4 @@
-import { Grid } from "./Grid"
+import { Grid } from "../components/Grid"
 
 import styles from "../styles/Home.module.scss"
 

@@ -1,11 +1,14 @@
 .nav-container {
-    background: aliceblue;
+    //background: aliceblue;
     top: 0;
     right: 0;
     bottom: 0;
     position: fixed;
     width: 120px;
-    padding: 30px 0;
+    padding: 60px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .nav-links {
@@ -14,14 +17,16 @@
     align-items: center;
     gap: 15px;
     letter-spacing: 2.5px;
+    margin-bottom: auto;
 }
 
-.nav-footer {
-    bottom: 0;
-    position: fixed;
-    padding: 60px 0px;
-    width: 120px;
-    text-align: center;
+.nav-stickwhack {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: flex-end;
+    font-style: italic;
+    letter-spacing: 5px;
 }
 
 .nav-logo { 

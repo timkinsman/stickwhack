@@ -1,10 +1,10 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 
-import { About } from './About';
-import { Home } from "./Home";
+import { About } from '../pages/About';
+import { Home } from "../pages/Home";
 import { Nav } from "./Nav";
-import { Shop } from './Shop';
-import { Work } from "./Work";
+import { Shop } from '../pages/Shop';
+import { Work } from "../pages/Work";
 
 import styles from '../styles/App.module.scss';
 

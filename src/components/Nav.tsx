@@ -11,9 +11,8 @@ export const Nav = (): JSX.Element => {
                 <Link to="/shop">shop</Link>
                 <Link to="/about">about</Link>
             </div>
-            <div className={styles["nav-footer"]}>
-                <Link to="/"><img src={dog} alt="dog" className={styles["nav-logo"]} /></Link>
-            </div>
+            <div className={styles["nav-stickwhack"]}><h3>stickwhack</h3></div> 
+            <Link to="/" style={{textAlign: "center"}}><img src={dog} alt="dog" className={styles["nav-logo"]} /></Link>
         </div>
     )
 }
