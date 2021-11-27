@@ -1,4 +1,4 @@
-import styles from "../styles/Shop.module.scss"
+//import styles from "../styles/Shop.module.scss"
 
 export const Shop = (): JSX.Element => {
     return (

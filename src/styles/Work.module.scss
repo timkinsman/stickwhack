@@ -1,4 +1,31 @@
 .work-container {
-    width: 100%;
+    padding: 60px;
     min-height: 100vh;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+}
+
+.work-img-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.work-img {
+    width: 50%;
+}
+
+.work-content-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-headings {
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
