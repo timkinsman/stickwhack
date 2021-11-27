@@ -29,8 +29,9 @@ export const Work = (): JSX.Element => {
                     </div>
                 </div>
                 <div className={styles["work-img-grid"]}>
-                    <img src={work.images[0]} alt="left" className={styles["work-img"]} />
-                    <img src={work.images[1]} alt="right" className={styles["work-img"]} />
+                    {work.images.map(image => {
+                        return <img src={image} alt="left" className={styles["work-img"]} />
+                    })}
                 </div>
             </div>
         </div>

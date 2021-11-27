@@ -8,6 +8,7 @@ export interface Work {
         bottom?: number;
         left?: number;
         rotate?: number;
+        width?: string
     }[],
     margin?: string;
     heading: string;

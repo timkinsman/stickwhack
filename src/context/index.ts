@@ -7,7 +7,7 @@ import frodeo from "../assets/frodeo.jpg"
 import frodeotote from "../assets/frodeotote.jpg"
 
 import stickernew from "../assets/new.png";
-// import stickersmiley from "../assets/smiley.png";
+import stickersmiley from "../assets/smiley.png";
 // import stickerwip from "../assets/wip.png";
 import stickerwipblue from "../assets/wipblue.png";
 
@@ -42,7 +42,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [sumo, sumo]
+        images: [sumo]
     },
     {
         id: workTypes.fingers,
@@ -57,7 +57,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [fingers, fingers]
+        images: [fingers]
     },
     {
         id: workTypes.sunscreen,
@@ -72,6 +72,13 @@ export const works: Work[] = [
     {
         id: workTypes.frodeo,
         thumbnail: frodeo,
+        stickers: [{
+            image: stickersmiley,
+            top: -40,
+            right: -40,
+            rotate: -10,
+            width: "125px"
+        }],
         heading: "FRODEO",
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
