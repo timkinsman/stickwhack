@@ -2,8 +2,8 @@
 
 export const Shop = (): JSX.Element => {
     return (
-        <div>
-            SHOP
+        <div style={{textAlign: "center"}}>
+            <h1>Coming soon</h1>
         </div>
     )
 }

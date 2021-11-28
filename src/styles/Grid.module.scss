@@ -7,6 +7,8 @@
 .grid-item {
     position: relative;
     transition: transform .5s;
+    height: auto;
+    width: 100%;
 
     &:hover {
         transform: scale(1.025);

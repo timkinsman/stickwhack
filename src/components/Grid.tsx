@@ -11,10 +11,10 @@ export const Grid = (): JSX.Element => {
                         <div className={styles["grid-item"]}>
                             {work.stickers?.map((sticker) => {
                                 return (
-                                    <img src={sticker.image} alt="sticker" style={{top: sticker.top, right: sticker.right, bottom: sticker.bottom, left: sticker.left, position: "absolute", width: sticker.width ? sticker.width : "200px", zIndex: 1, transform: "rotate(" + sticker.rotate + "deg)" }} />
+                                    <img loading="lazy" src={sticker.image} alt="sticker" style={{top: sticker.top, right: sticker.right, bottom: sticker.bottom, left: sticker.left, position: "absolute", width: sticker.width ? sticker.width : "200px", zIndex: 1, transform: "rotate(" + sticker.rotate + "deg)" }} />
                                 )
                             })}
-                            <img style={{width: "100%"}} src={work.thumbnail} alt="thumbnail" />
+                            <img loading="lazy" style={{width: "100%", height: "auto"}} src={work.thumbnail} alt="thumbnail" />
                         </div>
                     </Link>
                 )

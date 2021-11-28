@@ -7,21 +7,24 @@ import { Shop } from '../pages/Shop';
 import { Work } from "../pages/Work";
 
 import styles from '../styles/App.module.scss';
+import ScrollToTop from "./ScrollToTop";
 
 export const App = (): JSX.Element => {
   return (
     <Router>
-      <div className={styles["app-container"]}>
-        <Nav />
-        <div className={styles["app-page-container"]}> 
-          <Routes>
-              <Route path="/work/:id" element={<Work />}></Route>
-              <Route path="/shop" element={<Shop />}></Route>
-              <Route path="/about" element={<About />}></Route>
-              <Route path="*" element={<Home />}></Route>
-          </Routes>
+      <ScrollToTop>
+        <div className={styles["app-container"]}>
+          <Nav />
+          <div className={styles["app-page-container"]}> 
+            <Routes>
+                <Route path="/work/:id" element={<Work />}></Route>
+                <Route path="/shop" element={<Shop />}></Route>
+                <Route path="/about" element={<About />}></Route>
+                <Route path="*" element={<Home />}></Route>
+            </Routes>
+          </div>
         </div>
-      </div>
+      </ScrollToTop>
     </Router>
   );
 }

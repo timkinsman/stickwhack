@@ -42,7 +42,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [sumo]
+        images: [sumo, sumo]
     },
     {
         id: workTypes.fingers,
@@ -57,7 +57,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [fingers]
+        images: [fingers, fingers]
     },
     {
         id: workTypes.sunscreen,
