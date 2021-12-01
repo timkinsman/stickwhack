@@ -2,18 +2,19 @@ import styles from "../styles/Work.module.scss"
 import { useParams } from "react-router";
 
 import { works } from "../context"
+import { NotFound } from "./NotFound";
 
 export const Work = (): JSX.Element => {
     const { id } = useParams();
 
     if(!id){
-        return <div>Param not found</div>
+        return <NotFound />
     }
 
-    const work = works.find(x => x.id === parseInt(id));
+    const work = works.find(work => work.id === parseInt(id));
 
     if(!work){
-        return <div>Work not found</div>
+        return <NotFound />
     }
 
     return (

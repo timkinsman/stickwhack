@@ -8,6 +8,7 @@ import { Work } from "../pages/Work";
 
 import styles from '../styles/App.module.scss';
 import ScrollToTop from "./ScrollToTop";
+import { NotFound } from "../pages/NotFound";
 
 export const App = (): JSX.Element => {
   return (
@@ -20,7 +21,8 @@ export const App = (): JSX.Element => {
                 <Route path="/work/:id" element={<Work />}></Route>
                 <Route path="/shop" element={<Shop />}></Route>
                 <Route path="/about" element={<About />}></Route>
-                <Route path="*" element={<Home />}></Route>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="*" element={<NotFound />}></Route>
             </Routes>
           </div>
         </div>
