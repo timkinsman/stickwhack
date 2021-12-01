@@ -5,9 +5,12 @@ import fingers from "../assets/fingers.jpg";
 import sunscreen from "../assets/sunscreen.jpg"
 import frodeo from "../assets/frodeo.jpg"
 import frodeotote from "../assets/frodeotote.jpg"
+import wolga from "../assets/wolga.png"
+import unecoller from "../assets/unecoller.jpg"
+import cherrypickers from "../assets/cherrypickers.jpg"
 
 import stickernew from "../assets/new.png";
-import stickersmiley from "../assets/smiley.png";
+// import stickersmiley from "../assets/smiley.png";
 // import stickerwip from "../assets/wip.png";
 import stickerwipblue from "../assets/wipblue.png";
 
@@ -16,13 +19,17 @@ enum workTypes {
     sumo,
     fingers,
     sunscreen,
-    frodeo
+    frodeo,
+    wolga,
+    unecoller,
+    cherrypickers
 }
 
 export const works: Work[] = [
     {
         id: workTypes.fstarter,
         thumbnail: fstarter,
+        margin: "0 125px 0 0",
         heading: "ADELAIDE FRINGE FESTIVAL",
         subheading: "2021 Poster Entry",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
@@ -47,6 +54,7 @@ export const works: Work[] = [
     {
         id: workTypes.fingers,
         thumbnail: fingers,
+        margin: "50px 0 0 0",
         stickers: [{
             image: stickerwipblue,
             top: -50,
@@ -62,7 +70,7 @@ export const works: Work[] = [
     {
         id: workTypes.sunscreen,
         thumbnail: sunscreen,
-        margin: "0 0 0 30px",
+        margin: "0 0 0 150px",
         heading: "sunscreen OUMO",
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
@@ -72,17 +80,53 @@ export const works: Work[] = [
     {
         id: workTypes.frodeo,
         thumbnail: frodeo,
-        stickers: [{
-            image: stickersmiley,
-            top: -40,
-            right: -40,
-            rotate: -10,
-            width: "125px"
-        }],
         heading: "FRODEO",
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
         images: [frodeo, frodeotote]
+    },
+    {
+        id: workTypes.wolga,
+        thumbnail: wolga,
+        margin: "0 175px 0 0",
+        heading: "wolga",
+        subheading: "yummy",
+        brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
+        description: "",
+        images: [wolga, wolga]
+    },
+    {
+        id: workTypes.unecoller,
+        thumbnail: unecoller,
+        margin: "0 25px 0 10px",
+        heading: "unecoller",
+        subheading: "yummy",
+        brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
+        description: "",
+        images: [unecoller, unecoller]
+    },
+    {
+        id: workTypes.cherrypickers,
+        thumbnail: cherrypickers,
+        stickers: [{
+            image: stickerwipblue,
+            top: 0,
+            right: 110,
+            rotate: -10,
+            width: "175px"
+        },
+        {
+            image: stickernew,
+            top: -40,
+            right: 240,
+            rotate: 20,
+            width: "175px"
+        }],
+        heading: "cherrypickers",
+        subheading: "yummy",
+        brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
+        description: "",
+        images: [cherrypickers, cherrypickers]
     }
 ]

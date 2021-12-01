@@ -18,7 +18,7 @@ export const Work = (): JSX.Element => {
     }
 
     return (
-        <div className={styles["work-container"]}>
+        <div className={`${styles["work-container"]} global-fadein`}>
             <div className={styles["work-grid"]}>
                 <div className={styles["work-content-grid"]}>
                     <div className={styles["work-headings"]}>

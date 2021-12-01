@@ -21,6 +21,10 @@
     margin-bottom: auto;
 }
 
+.nav-links-selected {
+    border-bottom: 3px solid #000;
+}
+
 .nav-stickwhack {
     writing-mode: vertical-rl;
     transform: rotate(180deg);

@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.scss"
 
 export const Home = (): JSX.Element => {
     return (
-        <div className={styles["home-container"]}>
+        <div className={`${styles["home-container"]} global-fadein`}>
             <Grid />
         </div>
     )

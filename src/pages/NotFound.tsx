@@ -1,6 +1,8 @@
+import styles from "../styles/NotFound.module.scss"
+
 export const NotFound = (): JSX.Element => {
     return (
-        <div style={{textAlign: "center"}}>
+        <div className={`${styles["notfound-container"]} global-fadein`}>
             <h1>Page Not Found</h1>
         </div>
     )
