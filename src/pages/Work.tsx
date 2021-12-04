@@ -31,7 +31,7 @@ export const Work = (): JSX.Element => {
                 </div>
                 <div className={styles["work-img-grid"]}>
                     {work.images.map(image => {
-                        return <img loading="lazy" src={image} alt="left" style={{width: 100 / work.images.length + "%"}} className={styles["work-img"]} />
+                        return <img loading="lazy" src={image} alt="left" style={{width: "50%"}} className={styles["work-img"]} />
                     })}
                 </div>
             </div>

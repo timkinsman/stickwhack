@@ -34,7 +34,7 @@ export const works: Work[] = [
         subheading: "2021 Poster Entry",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [fstarter, fstarter]
+        images: [fstarter]
     },
     {
         id: workTypes.sumo,
@@ -49,7 +49,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [sumo, sumo]
+        images: [sumo]
     },
     {
         id: workTypes.fingers,
@@ -65,7 +65,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [fingers, fingers]
+        images: [fingers]
     },
     {
         id: workTypes.sunscreen,
@@ -75,7 +75,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [sunscreen, sunscreen]
+        images: [sunscreen]
     },
     {
         id: workTypes.frodeo,
@@ -94,7 +94,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [wolga, wolga]
+        images: [wolga]
     },
     {
         id: workTypes.unecoller,
@@ -104,7 +104,7 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [unecoller, unecoller]
+        images: [unecoller]
     },
     {
         id: workTypes.cherrypickers,
@@ -127,6 +127,6 @@ export const works: Work[] = [
         subheading: "yummy",
         brief: "Mauris posuere auctor lobortis. Pellentesque pellentesque scelerisque libero, sed mollis tellus scelerisque consectetur. Donec dictum arcu sed odio venenatis volutpat. Vestibulum mattis vehicula ultrices. Aenean vitae odio vulputate, tempor leo ut, convallis magna. In hendrerit nec mauris sit amet ornare.",
         description: "",
-        images: [cherrypickers, cherrypickers]
+        images: [cherrypickers]
     }
 ]

@@ -16,6 +16,7 @@
 .work-img-grid {
     display: flex;
     gap: 30px;
+    flex-direction: row-reverse;
 }
 
 // .work-img {
