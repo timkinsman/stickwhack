@@ -14,20 +14,9 @@ import stickernew from "../assets/new.png";
 // import stickerwip from "../assets/wip.png";
 import stickerwipblue from "../assets/wipblue.png";
 
-enum workTypes {
-    fstarter,
-    sumo,
-    fingers,
-    sunscreen,
-    frodeo,
-    wolga,
-    unecoller,
-    cherrypickers
-}
-
 export const works: Work[] = [
     {
-        id: workTypes.fstarter,
+        id: 0,
         thumbnail: fstarter,
         margin: "0 125px 0 0",
         heading: "ADELAIDE FRINGE FESTIVAL",
@@ -37,7 +26,7 @@ export const works: Work[] = [
         images: [fstarter]
     },
     {
-        id: workTypes.sumo,
+        id: 1,
         thumbnail: sumo,
         stickers: [{
             image: stickernew,
@@ -52,7 +41,7 @@ export const works: Work[] = [
         images: [sumo]
     },
     {
-        id: workTypes.fingers,
+        id: 2,
         thumbnail: fingers,
         margin: "50px 0 0 0",
         stickers: [{
@@ -68,7 +57,7 @@ export const works: Work[] = [
         images: [fingers]
     },
     {
-        id: workTypes.sunscreen,
+        id: 3,
         thumbnail: sunscreen,
         margin: "0 0 0 150px",
         heading: "sunscreen OUMO",
@@ -78,7 +67,7 @@ export const works: Work[] = [
         images: [sunscreen]
     },
     {
-        id: workTypes.frodeo,
+        id: 4,
         thumbnail: frodeo,
         heading: "FRODEO",
         subheading: "yummy",
@@ -87,7 +76,7 @@ export const works: Work[] = [
         images: [frodeo, frodeotote]
     },
     {
-        id: workTypes.wolga,
+        id: 5,
         thumbnail: wolga,
         margin: "0 175px 0 0",
         heading: "wolga",
@@ -97,7 +86,7 @@ export const works: Work[] = [
         images: [wolga]
     },
     {
-        id: workTypes.unecoller,
+        id: 6,
         thumbnail: unecoller,
         margin: "0 25px 0 10px",
         heading: "unecoller",
@@ -107,7 +96,7 @@ export const works: Work[] = [
         images: [unecoller]
     },
     {
-        id: workTypes.cherrypickers,
+        id: 7,
         thumbnail: cherrypickers,
         stickers: [{
             image: stickerwipblue,

@@ -6,12 +6,7 @@ import { NotFound } from "./NotFound";
 
 export const Work = (): JSX.Element => {
     const { id } = useParams();
-
-    if(!id){
-        return <NotFound />
-    }
-
-    const work = works.find(work => work.id === parseInt(id));
+    const work = works.find(work => work.id === Number(id));
 
     if(!work){
         return <NotFound />
