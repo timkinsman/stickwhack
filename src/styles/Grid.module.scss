@@ -1,17 +1,17 @@
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .grid-item {
-    position: relative;
-    transition: transform .5s;
-    height: auto;
-    width: 100%;
+  position: relative;
+  transition: transform 0.5s;
+  height: auto;
+  width: 100%;
 
-    &:hover {
-        transform: scale(1.025);
-        transition: transform .5s
-    }
+  &:hover {
+    transform: scale(1.025);
+    transition: transform 0.5s;
+  }
 }

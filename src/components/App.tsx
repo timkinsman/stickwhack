@@ -1,14 +1,13 @@
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
-
-import { About } from '../pages/About';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { About } from "../pages/About";
 import { Home } from "../pages/Home";
 import { Nav } from "./Nav";
-import { Shop } from '../pages/Shop';
+import { Shop } from "../pages/Shop";
 import { Work } from "../pages/Work";
-
-import styles from '../styles/App.module.scss';
-import ScrollToTop from "./ScrollToTop";
+import { Gallery } from "../pages/Gallery";
 import { NotFound } from "../pages/NotFound";
+import ScrollToTop from "./ScrollToTop";
+import styles from "../styles/App.module.scss";
 
 export const App = (): JSX.Element => {
   return (
@@ -16,17 +15,18 @@ export const App = (): JSX.Element => {
       <ScrollToTop>
         <div className={styles["app-container"]}>
           <Nav />
-          <div className={styles["app-page-container"]}> 
+          <div className={styles["app-page-container"]}>
             <Routes>
-                <Route path="/work/:id" element={<Work />}></Route>
-                <Route path="/shop" element={<Shop />}></Route>
-                <Route path="/about" element={<About />}></Route>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="*" element={<NotFound />}></Route>
+              <Route path="/work/:id" element={<Work />}></Route>
+              <Route path="/about" element={<About />}></Route>
+              <Route path="/gallery" element={<Gallery />}></Route>
+              <Route path="/shop" element={<Shop />}></Route>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="*" element={<NotFound />}></Route>
             </Routes>
           </div>
         </div>
       </ScrollToTop>
     </Router>
   );
-}
+};
