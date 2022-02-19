@@ -20,7 +20,7 @@ export const Banner = (): JSX.Element => {
 
   useEffect(() => {
     $("#root").css({
-      background: lightMode ? "#F5F5F5" : "#0B0B0C",
+      background: lightMode ? "#FFFFFF" : "#030305",
       color: lightMode ? "#000000" : "#FFFFFF",
     });
   }, [lightMode]);

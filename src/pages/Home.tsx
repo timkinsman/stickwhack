@@ -16,12 +16,6 @@ export const Home = (): JSX.Element => (
         desc="zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. "
         left="#030305"
         right="#ff007a"
-        sticker={{
-          image: stickernew,
-          top: -25,
-          left: -25,
-          width: "275px",
-        }}
       />
       <Panel
         thumb={wolga}
@@ -30,9 +24,10 @@ export const Home = (): JSX.Element => (
         left="#403672"
         right="#f1779c"
         sticker={{
-          image: stickersmiley,
+          image: stickernew,
           top: -25,
           left: -25,
+          width: "275px",
         }}
       />
       <Panel

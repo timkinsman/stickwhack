@@ -29,14 +29,17 @@ export const Panel = ({
   return (
     <div className={styles["container"]}>
       <div className={styles["left"]} style={{ background: left }}>
-        <div className={styles["inner-left"]}>
-          <img src={thumb} style={{ width: "30%" }} />
-          <h1 style={{ fontSize: "4em", marginBottom: "60px" }}>{title}</h1>
-          <h1
-            style={{ fontSize: "2em", marginBottom: "10px", lineHeight: "2em" }}
-          >
-            {desc}
-          </h1>
+        <div
+          className={styles["inner-left"]}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            height: "calc(100% - 100px)",
+          }}
+        >
+          <img src={thumb} style={{ width: "30%", margin: "auto 0" }} />
+          <h1 style={{ fontSize: "4em", marginBottom: "20px" }}>{title}</h1>
+          <h1 style={{ fontSize: "2em", lineHeight: "1.5em" }}>{desc}</h1>
         </div>
       </div>
       <div className={styles["right"]} style={{ background: right }}></div>
