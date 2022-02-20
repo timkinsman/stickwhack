@@ -25,9 +25,13 @@ export const Banner = (): JSX.Element => {
     });
   }, [lightMode]);
 
-  const handleOnClick = (id: string) => {
-    $("html,body").scrollTop($(id).offset()?.top || 0);
-  };
+  const handleOnClick = (id: string) =>
+    $("html,body").animate(
+      {
+        scrollTop: $(id).offset()?.top,
+      },
+      "slow"
+    );
 
   return (
     <div className={styles["outer-container"]}>

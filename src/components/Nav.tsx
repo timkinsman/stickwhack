@@ -1,45 +1,38 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from "../styles/Nav.module.scss";
+import $ from "jquery";
 
-export const Nav = (): JSX.Element => {
+const Link = ({ route, label }: { route: string; label: string }) => {
   const location = useLocation();
 
+  const handleOnClick = () =>
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      "slow"
+    );
+
   return (
-    <div className={styles["container"]}>
-      <Link
-        to="/"
-        className={
-          location.pathname === "/" ? styles["links-selected"] : ""
-        }
-      >
-        <h2>stickwhack</h2>
-      </Link>
-      <div className={styles["links"]}>
-        <Link
-          to="/about"
-          className={
-            location.pathname === "/about" ? styles["links-selected"] : ""
-          }
-        >
-          <h2>about</h2>
-        </Link>
-        <Link
-          to="/gallery"
-          className={
-            location.pathname === "/gallery" ? styles["links-selected"] : ""
-          }
-        >
-          <h2>gallery</h2>
-        </Link>
-        <Link
-          to="/shop"
-          className={
-            location.pathname === "/shop" ? styles["links-selected"] : ""
-          }
-        >
-          <h2>shop</h2>
-        </Link>
-      </div>
-    </div>
+    <h2>
+      {location.pathname === route ? (
+        <a onClick={handleOnClick} className={styles["selected"]}>
+          {label}
+        </a>
+      ) : (
+        <a href={route}>{label}</a>
+      )}
+    </h2>
   );
 };
+
+export const Nav = (): JSX.Element => (
+  <div className={styles["container"]}>
+    <Link route="/" label="stickwhack" />
+    <div className={styles["links"]}>
+      <Link route="/about" label="about" />
+      <Link route="/gallery" label="gallery" />
+      <Link route="/shop" label="shop" />
+    </div>
+  </div>
+);
