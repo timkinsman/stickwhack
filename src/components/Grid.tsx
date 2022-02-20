@@ -5,10 +5,10 @@ import { Sticker } from "./Sticker";
 import { Thumbnail } from "./Thumbnail";
 
 export const Grid = (): JSX.Element => (
-  <div className={styles["grid-container"]}>
+  <div className={styles["container"]}>
     {works.map((work) => (
       <Link to={`/work/${work.id}`} style={{ margin: work.margin }}>
-        <div className={styles["grid-item"]}>
+        <div className={styles["item"]}>
           {work.stickers?.map((sticker) => (
             <Sticker
               image={sticker.image}

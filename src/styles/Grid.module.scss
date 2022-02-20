@@ -1,10 +1,10 @@
-.grid-container {
+.container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.grid-item {
+.item {
   position: relative;
   transition: transform 0.5s;
   height: auto;

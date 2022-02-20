@@ -7,26 +7,22 @@ import { Work } from "../pages/Work";
 import { Gallery } from "../pages/Gallery";
 import { NotFound } from "../pages/NotFound";
 import ScrollToTop from "./ScrollToTop";
-import styles from "../styles/App.module.scss";
+import { AppContainer } from "./AppContainer";
 
-export const App = (): JSX.Element => {
-  return (
-    <Router>
-      <ScrollToTop>
-        <div className={styles["app-container"]}>
-          <Nav />
-          <div className={styles["app-page-container"]}>
-            <Routes>
-              <Route path="/work/:id" element={<Work />}></Route>
-              <Route path="/about" element={<About />}></Route>
-              <Route path="/gallery" element={<Gallery />}></Route>
-              <Route path="/shop" element={<Shop />}></Route>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="*" element={<NotFound />}></Route>
-            </Routes>
-          </div>
-        </div>
-      </ScrollToTop>
-    </Router>
-  );
-};
+export const App = (): JSX.Element => (
+  <Router>
+    <ScrollToTop>
+      <AppContainer>
+        <Nav />
+        <Routes>
+          <Route path="/work/:id" element={<Work />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/gallery" element={<Gallery />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+      </AppContainer>
+    </ScrollToTop>
+  </Router>
+);

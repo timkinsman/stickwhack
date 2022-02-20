@@ -1,4 +1,4 @@
-.nav-container {
+.container {
   //background: aliceblue;
   top: 0;
   right: 0;
@@ -12,7 +12,7 @@
   z-index: 2;
 }
 
-.nav-links {
+.links {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,11 +21,11 @@
   margin-bottom: auto;
 }
 
-.nav-links-selected {
+.links-selected {
   border-bottom: 3px solid #000;
 }
 
-.nav-stickwhack {
+.stickwhack {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   display: flex;
@@ -35,7 +35,7 @@
   padding-top: 78px;
 }
 
-.nav-logo {
+.logo {
   height: 350px;
   position: fixed;
   bottom: 0;

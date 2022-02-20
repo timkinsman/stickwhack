@@ -25,18 +25,23 @@ export const Banner = (): JSX.Element => {
     });
   }, [lightMode]);
 
+  const handleOnClick = (id: string) => {
+    $("html,body").scrollTop($(id).offset()?.top || 0);
+  };
+
   return (
-    <div
-      style={{
-        padding: "50px",
-        width: "calc(1005 - 100px)",
-        position: "relative",
-      }}
-    >
+    <div className={styles["outer-container"]}>
       <div className={styles["container"]}>
         <h1 style={{ fontSize: "8em" }}>HI I'M KE$HA! {wink ? ";" : ":"})</h1>
         <h1 style={{ fontSize: "4em" }}>
-          I'm an extremly talented graphic designer (you'll have to remind me)
+          I'm an{" "}
+          <button
+            className={styles["button"]}
+            onClick={() => handleOnClick("#panel-container")}
+          >
+            extremly talented graphic designer
+          </button>{" "}
+          (you'll have to remind me)
         </h1>
       </div>
       {!lightMode ? (

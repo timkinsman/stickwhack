@@ -5,3 +5,18 @@
   flex-direction: column;
   max-width: 1200px;
 }
+
+.outer-container {
+  padding: 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.button {
+  &:hover {
+    color: orange;
+  }
+}
