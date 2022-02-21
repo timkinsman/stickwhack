@@ -10,14 +10,16 @@ export const Home = (): JSX.Element => (
     <div style={{ height: "100vh" }}></div>
     <div className={styles["panel-container"]} id="panel-container">
       <Panel
-        thumb={wolga}
+        logo={wolga}
+        thumbs={[wolga, wolga, wolga]}
         title="LUCKY ZEP'S"
         desc="zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. "
         left="#030305"
         right="#ff007a"
       />
       <Panel
-        thumb={wolga}
+        logo={wolga}
+        thumbs={[wolga, wolga, wolga]}
         title="2021 FRINGE FESTIVAL"
         desc="i love kesha so much. i love kesha so much. i love kesha so much. i love kesha so much. i love kesha so much."
         left="#403672"
@@ -30,7 +32,8 @@ export const Home = (): JSX.Element => (
         }}
       />
       <Panel
-        thumb={wolga}
+        logo={wolga}
+        thumbs={[wolga, wolga, wolga]}
         title="SCREENPRINTING"
         desc="kesh is amazing at everything she does. kesh is amazing at everything she does. kesh is amazing at everything she does."
         left="#d9012a"

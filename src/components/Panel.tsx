@@ -1,7 +1,6 @@
+import { useEffect, useState } from "react";
 import styles from "../styles/Panel.module.scss";
 import { Sticker } from "./Sticker";
-import frodeotote from "../assets/frodeotote.jpg";
-import { useState } from "react";
 
 interface PanelProps {
   left: string;
@@ -17,7 +16,8 @@ interface PanelProps {
   };
   title: string;
   desc: string;
-  thumb: string;
+  logo: string;
+  thumbs: string[];
 }
 
 export const Panel = ({
@@ -26,15 +26,21 @@ export const Panel = ({
   sticker,
   title,
   desc,
-  thumb,
+  logo,
+  thumbs,
 }: PanelProps): JSX.Element => {
-  const images = [frodeotote, frodeotote, frodeotote];
   const [pagination, setPagination] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPagination((pagination + 1) % thumbs.length);
+    }, 3000);
+  }, [pagination, thumbs.length]);
 
   return (
     <div className={styles["container"]}>
       <div className={styles["left"]} style={{ background: left }}>
-        <img src={thumb} style={{ width: "30%", margin: "auto 0" }} />
+        <img src={logo} alt="" style={{ width: "30%", margin: "auto 0" }} />
         <h1 style={{ fontSize: "4em", marginBottom: "20px" }}>{title}</h1>
         <h1
           style={{
@@ -46,8 +52,29 @@ export const Panel = ({
           {desc}
         </h1>
       </div>
-      <div className={styles["right"]} style={{ background: right }}>
-        <img style={{ width: "50%" }} src={thumb} />
+      <div
+        style={{
+          position: "relative",
+          minHeight: "100vh",
+          overflowX: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            display: "grid",
+            gridTemplateColumns: `repeat(${thumbs.length}, 1fr)`,
+            width: `${thumbs.length * 100}%`,
+            left: `${pagination * -100}%`,
+            transition: "left 2s",
+          }}
+        >
+          {thumbs.map((thumb) => (
+            <div className={styles["right"]} style={{ background: right }}>
+              <img style={{ width: "50%" }} alt="" src={thumb} />
+            </div>
+          ))}
+        </div>
       </div>
       {sticker && (
         <Sticker
