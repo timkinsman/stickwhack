@@ -31,11 +31,10 @@ export const Panel = ({
 }: PanelProps): JSX.Element => {
   const [pagination, setPagination] = useState(0);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setPagination((pagination + 1) % thumbs.length);
-    }, 3000);
-  }, [pagination, thumbs.length]);
+  const handleOnClick = (next: number) =>
+    next < 0
+      ? setPagination(thumbs.length - 1)
+      : setPagination(next % thumbs.length);
 
   return (
     <div className={styles["container"]}>
@@ -59,6 +58,28 @@ export const Panel = ({
           overflowX: "hidden",
         }}
       >
+        <button
+          style={{
+            position: "absolute",
+            left: 0,
+            top: "50%",
+            zIndex: 99,
+          }}
+          onClick={() => handleOnClick(pagination - 1)}
+        >
+          left
+        </button>
+        <button
+          style={{
+            position: "absolute",
+            right: 0,
+            top: "50%",
+            zIndex: 99,
+          }}
+          onClick={() => handleOnClick(pagination + 1)}
+        >
+          right
+        </button>
         <div
           style={{
             position: "absolute",
