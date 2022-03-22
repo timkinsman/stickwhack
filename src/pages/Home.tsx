@@ -14,15 +14,15 @@ export const Home = (): JSX.Element => (
         thumbs={[wolga, wolga, wolga]}
         title="LUCKY ZEP'S"
         desc="zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. "
-        left="#030305"
-        right="#ff007a"
+        left="#272727"
+        right="#000000"
       />
       <Panel
         logo={wolga}
         thumbs={[wolga, wolga, wolga]}
         title="2021 FRINGE FESTIVAL"
         desc="i love kesha so much. i love kesha so much. i love kesha so much. i love kesha so much. i love kesha so much."
-        left="#403672"
+        left="#FFE6E6"
         right="#f1779c"
         sticker={{
           image: stickernew,
@@ -36,7 +36,15 @@ export const Home = (): JSX.Element => (
         thumbs={[wolga, wolga, wolga]}
         title="SCREENPRINTING"
         desc="kesh is amazing at everything she does. kesh is amazing at everything she does. kesh is amazing at everything she does."
-        left="#d9012a"
+        left="#F5F7EC"
+        right="#fa806b"
+      />
+      <Panel
+        logo={wolga}
+        thumbs={[wolga, wolga, wolga]}
+        title="SCREENPRINTING"
+        desc="kesh is amazing at everything she does. kesh is amazing at everything she does. kesh is amazing at everything she does."
+        left="#C9C7FF"
         right="#fa806b"
       />
     </div>

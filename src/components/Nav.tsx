@@ -14,7 +14,7 @@ const Link = ({ route, label }: { route: string; label: string }) => {
     );
 
   return (
-    <h2>
+    <h4 style={{ fontWeight: 400 }}>
       {location.pathname === route ? (
         <a onClick={handleOnClick} className={styles["selected"]}>
           {label}
@@ -22,7 +22,7 @@ const Link = ({ route, label }: { route: string; label: string }) => {
       ) : (
         <a href={route}>{label}</a>
       )}
-    </h2>
+    </h4>
   );
 };
 

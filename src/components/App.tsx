@@ -8,6 +8,7 @@ import { Gallery } from "../pages/Gallery";
 import { NotFound } from "../pages/NotFound";
 import ScrollToTop from "./ScrollToTop";
 import { AppContainer } from "./AppContainer";
+import { Footer } from "./Footer";
 
 export const App = (): JSX.Element => (
   <Router>
@@ -22,6 +23,7 @@ export const App = (): JSX.Element => (
           <Route path="/" element={<Home />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
+        <Footer heading="lucky zeps" />
       </AppContainer>
     </ScrollToTop>
   </Router>

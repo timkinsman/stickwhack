@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  font-family: paralucent, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: 300;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -38,8 +38,10 @@ a {
   color: blue;
 
   &:hover {
-    font-style: italic;
+    font-family: swear-display-cilati;
     cursor: pointer !important;
+    font-weight: 700;
+    font-size: 36px;
   }
 }
 
@@ -123,33 +125,3 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
   }
 }
-
-// Paralucent Demi Bold
-// font-family: paralucent,sans-serif;
-// font-weight: 600;
-// font-style: normal;
-
-// Paralucent Light Italic
-// font-family: paralucent,sans-serif;
-// font-weight: 300;
-// font-style: italic;
-
-// Paralucent Medium Italic
-// font-family: paralucent,sans-serif;
-// font-weight: 500;
-// font-style: italic;
-
-// Paralucent Light
-// font-family: paralucent,sans-serif;
-// font-weight: 300;
-// font-style: normal;
-
-// Paralucent Demi Bold Italic
-// font-family: paralucent,sans-serif;
-// font-weight: 600;
-// font-style: italic;
-
-// Paralucent Medium
-// font-family: paralucent,sans-serif;
-// font-weight: 500;
-// font-style: normal;
