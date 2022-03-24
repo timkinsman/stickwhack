@@ -17,7 +17,7 @@ export const Banner = (): JSX.Element => {
         <div style={{ display: "flex", gap: "12px", alignItems: "baseline" }}>
           <h1
             style={{
-              fontSize: "12em",
+              fontSize: "230px",
               fontFamily: "swear-display-cilati",
               marginLeft: "-60px",
               paddingRight: "36px",
@@ -25,20 +25,21 @@ export const Banner = (): JSX.Element => {
           >
             hello!
           </h1>
-          {[...Array(12)].map((n, i) => (
+          {[...Array(12)].map(() => (
             <img
               className={styles["smiley"]}
               src={smiley}
-              style={{ height: "120px", animationDelay: `${Math.random()}s` }}
+              style={{ height: "142px", animationDelay: `${Math.random()}s` }}
             />
           ))}
         </div>
         <h1
           style={{
-            fontSize: "4em",
+            fontSize: "80px",
             fontFamily: "Helvetica",
             fontWeight: 400,
             marginTop: "-30px",
+            lineHeight: "90px",
           }}
         >
           my name is kesha (aka stickwhack){" "}
@@ -51,8 +52,10 @@ export const Banner = (): JSX.Element => {
         </h1>
       </div>
       <button style={{ position: "absolute", top: 50, right: 50 }}>
-        <h4 style={{ fontWeight: 400, fontSize: "32px" }}>
-          <a href="#">why stickwhack?</a>
+        <h4 style={{ fontWeight: 400, fontSize: "30px" }}>
+          <a href="https://www.youtube.com/watch?v=Yhe7rcDUTeI" target="_blank">
+            why stickwhack?
+          </a>
         </h4>
       </button>
     </div>

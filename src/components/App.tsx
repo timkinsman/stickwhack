@@ -23,7 +23,7 @@ export const App = (): JSX.Element => (
           <Route path="/" element={<Home />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
-        <Footer heading="lucky zeps" />
+        <Footer />
       </AppContainer>
     </ScrollToTop>
   </Router>

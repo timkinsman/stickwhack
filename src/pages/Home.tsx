@@ -12,38 +12,36 @@ export const Home = (): JSX.Element => (
       <Panel
         logo={wolga}
         thumbs={[wolga, wolga, wolga]}
-        title="LUCKY ZEP'S"
-        desc="zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. zeppy is a good boy. "
+        title="branding and apparel"
+        desc="Lucky Zep’s is a restaurant and bar that 
+focuses on paying homage to retro style, 
+yet appealing to a younger audience."
         left="#272727"
         right="#000000"
+        color='#FFFFFF'
       />
       <Panel
         logo={wolga}
         thumbs={[wolga, wolga, wolga]}
-        title="2021 FRINGE FESTIVAL"
-        desc="i love kesha so much. i love kesha so much. i love kesha so much. i love kesha so much. i love kesha so much."
+        title="Adelaide Fringe Festival 2021 poster entry"
+        desc="Firestarter was a concept for the Adelaide Fringe Festival 2021 poster competiton. The concept represents the Fringe’s role in ‘lighting the fire’
+in Adelaide every year."
         left="#FFE6E6"
         right="#f1779c"
-        sticker={{
-          image: stickernew,
-          top: -25,
-          left: -25,
-          width: "275px",
-        }}
       />
       <Panel
         logo={wolga}
         thumbs={[wolga, wolga, wolga]}
-        title="SCREENPRINTING"
-        desc="kesh is amazing at everything she does. kesh is amazing at everything she does. kesh is amazing at everything she does."
+        title="branding and stationery"
+        desc="Debbie is an artist and art therapist who was looking for a refresh. We focused on representing her own art and her art therapy processes in the final design."
         left="#F5F7EC"
         right="#fa806b"
       />
       <Panel
         logo={wolga}
         thumbs={[wolga, wolga, wolga]}
-        title="SCREENPRINTING"
-        desc="kesh is amazing at everything she does. kesh is amazing at everything she does. kesh is amazing at everything she does."
+        title="illustration and merch design"
+        desc="I have created a variety of illustrations and custom typography, with some for future use on apparel or art prints. Some I have also screen printed myself."
         left="#C9C7FF"
         right="#fa806b"
       />

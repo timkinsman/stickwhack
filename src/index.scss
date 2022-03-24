@@ -35,13 +35,14 @@ input[type="reset"] {
 a {
   text-decoration: none;
   cursor: pointer !important;
-  color: blue;
+  color: #2a0fff;
+  line-height: 44px;
+  font-size: 30px;
 
   &:hover {
     font-family: swear-display-cilati;
     cursor: pointer !important;
     font-weight: 700;
-    font-size: 36px;
   }
 }
 
@@ -64,7 +65,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: blue; /* color of the scroll thumb */
+  background-color: #2a0fff; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid orange; /* creates padding around scroll thumb */
 }

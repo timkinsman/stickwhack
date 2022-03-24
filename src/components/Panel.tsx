@@ -18,6 +18,7 @@ interface PanelProps {
   desc: string;
   logo: string;
   thumbs: string[];
+  color?: string;
 }
 
 export const Panel = ({
@@ -28,6 +29,7 @@ export const Panel = ({
   desc,
   logo,
   thumbs,
+  color = "#000000",
 }: PanelProps): JSX.Element => {
   const [pagination, setPagination] = useState(0);
 
@@ -38,14 +40,19 @@ export const Panel = ({
 
   return (
     <div className={styles["container"]}>
-      <div className={styles["left"]} style={{ background: left }}>
+      <div
+        className={styles["left"]}
+        style={{ background: left, color: color }}
+      >
         <img src={logo} alt="" style={{ width: "30%", margin: "auto 0" }} />
-        <h1 style={{ fontSize: "4em", marginBottom: "20px" }}>{title}</h1>
+        <h1 style={{ fontSize: "37px", marginBottom: "20px", fontWeight: 400 }}>
+          {title}
+        </h1>
         <h1
           style={{
-            fontSize: "em",
-            lineHeight: "1.5em",
+            fontSize: "35px",
             marginBottom: "40px",
+            fontWeight: 400,
           }}
         >
           {desc}
