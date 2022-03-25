@@ -1,6 +1,6 @@
 import * as type from '../actions/types';
 
-const INITIAL_STATE = "lucky zep's";
+const INITIAL_STATE = '';
 
 export default (state = INITIAL_STATE, action: any) => {
   switch (action.type) {

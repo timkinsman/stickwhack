@@ -1,7 +1,7 @@
 import styles from '../styles/Thumbnail.module.scss';
 
 interface ThumbnailProps {
-  image: string;
+  image?: string;
 }
 
 export const Thumbnail = (props: ThumbnailProps): JSX.Element => (

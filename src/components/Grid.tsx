@@ -6,21 +6,21 @@ import { Thumbnail } from './Thumbnail';
 
 export const Grid = (): JSX.Element => (
   <div className={styles['container']}>
-    {works.map((work) => (
+    {works?.map((work) => (
       <Link to={`/work/${work.id}`} style={{ margin: work.margin }}>
         <div className={styles['item']}>
-          {work.stickers?.map((sticker) => (
+          {work?.stickers?.map((sticker) => (
             <Sticker
-              image={sticker.image}
-              top={sticker.top}
-              right={sticker.right}
-              bottom={sticker.bottom}
-              left={sticker.left}
-              width={sticker.width}
-              rotate={sticker.rotate}
+              image={sticker?.image}
+              top={sticker?.top}
+              right={sticker?.right}
+              bottom={sticker?.bottom}
+              left={sticker?.left}
+              width={sticker?.width}
+              rotate={sticker?.rotate}
             />
           ))}
-          <Thumbnail image={work.thumbnail} />
+          <Thumbnail image={work?.thumbnail} />
         </div>
       </Link>
     ))}

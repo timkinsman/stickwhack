@@ -7,7 +7,7 @@ interface FooterProps {
 
 const _Footer = ({ work }: FooterProps): JSX.Element => (
   <div className={styles['container']}>
-    <h1 className={styles['text']}>{work}</h1>
+    <h1 className={styles['heading']}>{work}</h1>
   </div>
 );
 

@@ -27,8 +27,8 @@ export const Nav = (): JSX.Element => (
     <Link route='/' label='stickwhack' />
     <div className={styles['links']}>
       <Link route='/about' label='about' />
-      <Link route='/gallery' label='gallery' />
-      <Link route='/shop' label='shop' />
+      {/* <Link route='/gallery' label='gallery' />
+      <Link route='/shop' label='shop' /> */}
     </div>
   </div>
 );

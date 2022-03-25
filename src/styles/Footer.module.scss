@@ -1,4 +1,4 @@
-@use "../colors";
+@use '../colors';
 
 .container {
   min-height: 362px;
@@ -6,8 +6,9 @@
   position: relative;
 }
 
-.text {
+.heading {
   color: colors.$sand;
   font-size: 150px;
   font-family: swear-display-cilati;
+  font-weight: 700;
 }

@@ -1,29 +1,31 @@
 import { useParams } from 'react-router';
-import { works } from '../context';
+import { showCases } from '../context';
 import { NotFound } from './NotFound';
-import styles from '../styles/Work.module.scss';
+import styles from '../styles/ShowCase.module.scss';
 import { setActiveWorkAction } from '../actions/workAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
+import $ from 'jquery';
 
-interface WorkProps {
+interface ShowCaseProps {
   setActiveWork?: Function;
 }
 
-export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
+export const _ShowCase = ({ setActiveWork }: ShowCaseProps): JSX.Element => {
   const { id } = useParams();
-  const work = works.find((work) => work.id === Number(id));
+  const showCase = showCases.find((showCase) => showCase.id === Number(id));
 
-  if (!work) {
+  if (!showCase) {
     return <NotFound />;
   }
 
-  if (setActiveWork) setActiveWork(work.heading);
+  if (setActiveWork) setActiveWork(showCase.title);
+  $('body').css({ background: showCase.left });
 
   return (
-    <div className={`${styles['work-container']} global-fadein`}>
-      <div className={styles['work-grid']}>
+    <div className={`${styles['container']} global-fadein`}>
+      {/* <div className={styles['work-grid']}>
         <div className={styles['work-content-grid']}>
           <div className={styles['work-headings']}>
             <h2 style={{ fontSize: '4em' }}>{work.heading}</h2>
@@ -44,7 +46,7 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -57,4 +59,4 @@ const mapDispatchToProps = (dispatch: any) =>
     dispatch,
   );
 
-export const Work = connect(null, mapDispatchToProps)(_Work);
+export const ShowCase = connect(null, mapDispatchToProps)(_ShowCase);

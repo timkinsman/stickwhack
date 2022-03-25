@@ -9,6 +9,7 @@ import { NotFound } from '../pages/NotFound';
 import ScrollToTop from './ScrollToTop';
 import { AppContainer } from './AppContainer';
 import { Footer } from './Footer';
+import { ShowCase } from '../pages/ShowCase';
 
 export const App = (): JSX.Element => (
   <Router>
@@ -16,10 +17,11 @@ export const App = (): JSX.Element => (
       <AppContainer>
         <Nav />
         <Routes>
-          <Route path='/work/:id' element={<Work />}></Route>
+          <Route path='/showCase/:id' element={<ShowCase />}></Route>
+          {/* <Route path='/work/:id' element={<Work />}></Route> */}
           <Route path='/about' element={<About />}></Route>
-          <Route path='/gallery' element={<Gallery />}></Route>
-          <Route path='/shop' element={<Shop />}></Route>
+          {/* <Route path='/gallery' element={<Gallery />}></Route>
+          <Route path='/shop' element={<Shop />}></Route> */}
           <Route path='/' element={<Home />}></Route>
           <Route path='*' element={<NotFound />}></Route>
         </Routes>
