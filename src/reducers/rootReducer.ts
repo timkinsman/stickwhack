@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
-import workReducer from "./workReducer";
+import { combineReducers } from 'redux';
+import workReducer from './workReducer';
 
 // App's top-level reducers
 export default combineReducers({

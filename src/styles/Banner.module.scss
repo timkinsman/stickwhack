@@ -17,12 +17,15 @@
 }
 
 .button {
+  text-align: left;
   &:hover {
     color: orange;
   }
 }
 
 .smiley {
+  height: 142px;
+
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -40,4 +43,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.heading-container {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.heading {
+  font-size: 230px;
+  font-family: swear-display-cilati;
+  margin-left: -60px;
+  padding-right: 36px;
+  font-weight: 700;
+}
+
+.subheading {
+  font-size: 80px;
+  font-family: Helvetica;
+  font-weight: 400;
+  margin-top: -30px;
+  line-height: 90px;
 }

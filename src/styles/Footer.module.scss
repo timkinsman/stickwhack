@@ -1,4 +1,13 @@
+@use "../colors";
+
 .container {
   min-height: 362px;
-  background: #2A0FFF;
+  background: colors.$midnight-blue;
+  position: relative;
+}
+
+.text {
+  color: colors.$sand;
+  font-size: 150px;
+  font-family: swear-display-cilati;
 }

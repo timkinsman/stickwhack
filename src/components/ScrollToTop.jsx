@@ -1,8 +1,8 @@
 // https://www.kindacode.com/article/react-router-dom-scroll-to-top-on-route-change/
 
 // ScrollToTop.jsx
-import { useEffect } from "react";
-import { useLocation } from "react-router";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router';
 
 const ScrollToTop = (props) => {
   const location = useLocation();

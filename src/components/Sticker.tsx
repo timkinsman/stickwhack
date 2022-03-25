@@ -1,19 +1,19 @@
-import { Sticker as StickerProps } from "../interfaces";
-import styles from "../styles/Sticker.module.scss";
+import { Sticker as StickerProps } from '../interfaces';
+import styles from '../styles/Sticker.module.scss';
 
 export const Sticker = (props: StickerProps): JSX.Element => (
   <img
-    loading="lazy"
-    className={styles["sticker"]}
+    loading='lazy'
+    className={styles['sticker']}
     src={props.image}
-    alt="sticker"
+    alt='sticker'
     style={{
       top: props.top,
       right: props.right,
       bottom: props.bottom,
       left: props.left,
-      width: props.width ? props.width : "200px",
-      transform: "rotate(" + props.rotate + "deg)",
+      width: props.width ? props.width : '200px',
+      transform: 'rotate(' + props.rotate + 'deg)',
     }}
   />
 );

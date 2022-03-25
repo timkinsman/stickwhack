@@ -1,4 +1,4 @@
-import * as type from "../actions/types";
+import * as type from '../actions/types';
 
 const INITIAL_STATE = "lucky zep's";
 

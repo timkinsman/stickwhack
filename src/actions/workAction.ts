@@ -1,4 +1,4 @@
-import { SET_ACTIVE_WORK } from "./types";
+import { SET_ACTIVE_WORK } from './types';
 
 export const setActiveWorkAction = (text: string) => (dispatch: any) => {
   dispatch({

@@ -1,3 +1,5 @@
+@use './colors';
+
 html {
   overflow-y: scroll;
 }
@@ -9,11 +11,13 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: colors.$sand;
+  color: colors.$midnight-blue;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 #root {
@@ -21,8 +25,8 @@ code {
 }
 
 button,
-input[type="submit"],
-input[type="reset"] {
+input[type='submit'],
+input[type='reset'] {
   background: none;
   color: inherit;
   border: none;
@@ -35,7 +39,7 @@ input[type="reset"] {
 a {
   text-decoration: none;
   cursor: pointer !important;
-  color: #2a0fff;
+  color: colors.$midnight-blue;
   line-height: 44px;
   font-size: 30px;
 
@@ -54,6 +58,8 @@ h5,
 p {
   margin: 0;
   cursor: default;
+
+  font-weight: 400;
 }
 
 body::-webkit-scrollbar {
@@ -65,7 +71,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #2a0fff; /* color of the scroll thumb */
+  background-color: colors.$midnight-blue; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid orange; /* creates padding around scroll thumb */
 }
