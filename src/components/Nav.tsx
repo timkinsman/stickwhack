@@ -1,8 +1,8 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from '../styles/Nav.module.scss';
 import $ from 'jquery';
 
-const Link = ({ route, label }: { route: string; label: string }) => {
+const NavLink = ({ route, label }: { route: string; label: string }) => {
   const location = useLocation();
 
   const handleOnClick = () =>
@@ -18,7 +18,7 @@ const Link = ({ route, label }: { route: string; label: string }) => {
       {label}
     </a>
   ) : (
-    <a href={route}>{label}</a>
+    <Link to={route}>{label}</Link>
   );
 };
 
@@ -31,15 +31,15 @@ export const Nav = (): JSX.Element => (
     </button>
 
     <div style={{ position: 'fixed', bottom: 25, left: 50, zIndex: 99 }}>
-      <Link route='/' label='stickwhack' />
+      <NavLink route='/' label='stickwhack' />
     </div>
 
     <div
       style={{ position: 'fixed', bottom: 25, right: 50, zIndex: 99, display: 'flex', gap: '50px' }}
     >
-      <Link route='/about' label='about' />
-      {/* <Link route='/gallery' label='gallery' />
-      <Link route='/shop' label='shop' /> */}
+      <NavLink route='/about' label='about' />
+      {/* <NavLink route='/gallery' label='gallery' />
+      <NavLink route='/shop' label='shop' /> */}
     </div>
   </>
 );

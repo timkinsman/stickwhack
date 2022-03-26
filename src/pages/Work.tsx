@@ -16,6 +16,13 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
   const { id } = useParams();
   const work = works.find((work) => work.id === Number(id));
 
+  useEffect(() => {
+    return () => {
+      setActiveWork && setActiveWork(null);
+      $('body').css({ background: '#fae5c2', color: '#2a0fff' });
+    };
+  }, []);
+
   if (!work) {
     return <NotFound />;
   }
