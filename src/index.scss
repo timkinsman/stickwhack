@@ -63,19 +63,19 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
-body::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
-}
+// body::-webkit-scrollbar {
+//   width: 12px; /* width of the entire scrollbar */
+// }
 
-body::-webkit-scrollbar-track {
-  background: orange; /* color of the tracking area */
-}
+// body::-webkit-scrollbar-track {
+//   background: orange; /* color of the tracking area */
+// }
 
-body::-webkit-scrollbar-thumb {
-  background-color: colors.$midnight-blue; /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid orange; /* creates padding around scroll thumb */
-}
+// body::-webkit-scrollbar-thumb {
+//   background-color: colors.$midnight-blue; /* color of the scroll thumb */
+//   border-radius: 20px; /* roundness of the scroll thumb */
+//   border: 3px solid orange; /* creates padding around scroll thumb */
+// }
 
 .global-fadein {
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
