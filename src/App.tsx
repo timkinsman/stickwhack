@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { About } from '../pages/About';
-import { Home } from '../pages/Home';
-import { Nav } from './Nav';
-import { Shop } from '../pages/Shop';
-import { Work } from '../pages/Work';
-import { Gallery } from '../pages/Gallery';
-import { NotFound } from '../pages/NotFound';
-import ScrollToTop from './ScrollToTop';
-import { AppContainer } from './AppContainer';
-import { Footer } from './Footer';
-import { ShowCase } from '../pages/ShowCase';
+import { About } from './pages/About';
+import { Home } from './pages/Home';
+import { Nav } from './components/Nav';
+// import { Shop } from './pages/Shop';
+import { Work } from './pages/Work';
+// import { Gallery } from './pages/Gallery';
+import { NotFound } from './pages/NotFound';
+import ScrollToTop from './components/ScrollToTop';
+import { AppContainer } from './components/AppContainer';
+import { Footer } from './components/Footer';
 
 export const App = (): JSX.Element => (
   <Router>
@@ -17,8 +16,7 @@ export const App = (): JSX.Element => (
       <AppContainer>
         <Nav />
         <Routes>
-          <Route path='/showCase/:id' element={<ShowCase />}></Route>
-          {/* <Route path='/work/:id' element={<Work />}></Route> */}
+          <Route path='/work/:id' element={<Work />}></Route>
           <Route path='/about' element={<About />}></Route>
           {/* <Route path='/gallery' element={<Gallery />}></Route>
           <Route path='/shop' element={<Shop />}></Route> */}

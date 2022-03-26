@@ -24,7 +24,7 @@
 
 .thumb-container {
   min-height: calc(100vh - 100px);
-  padding: 50px;
+  // padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@
 .right {
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .button-left {
@@ -69,8 +69,11 @@
   position: absolute;
   display: grid;
   transition: left 2s;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .image {
-  width: 50%;
+  height: 100%;
+  width: 100%;
 }

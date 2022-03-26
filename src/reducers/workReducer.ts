@@ -1,6 +1,7 @@
 import * as type from '../actions/types';
+import { Work } from '../interfaces';
 
-const INITIAL_STATE = '';
+const INITIAL_STATE: Work | null = null;
 
 export default (state = INITIAL_STATE, action: any) => {
   switch (action.type) {

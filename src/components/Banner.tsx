@@ -31,11 +31,6 @@ export const Banner = (): JSX.Element => {
           </button>
         </div>
       </div>
-      <button style={{ position: 'absolute', top: 50, right: 50 }}>
-        <a href='https://www.youtube.com/watch?v=Yhe7rcDUTeI' target='_blank' rel='noreferrer'>
-          why stickwhack?
-        </a>
-      </button>
     </div>
   );
 };

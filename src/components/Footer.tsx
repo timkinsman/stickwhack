@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
+import { Work } from '../interfaces';
 import styles from '../styles/Footer.module.scss';
 
 interface FooterProps {
-  work?: string;
+  work?: Work;
 }
 
 const _Footer = ({ work }: FooterProps): JSX.Element => (
   <div className={styles['container']}>
-    <h1 className={styles['heading']}>{work}</h1>
+    <div className={styles['heading']}>{work?.title}</div>
   </div>
 );
 

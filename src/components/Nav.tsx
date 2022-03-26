@@ -23,12 +23,23 @@ const Link = ({ route, label }: { route: string; label: string }) => {
 };
 
 export const Nav = (): JSX.Element => (
-  <div className={styles['container']}>
-    <Link route='/' label='stickwhack' />
-    <div className={styles['links']}>
+  <>
+    <button style={{ position: 'fixed', top: 25, right: 50, zIndex: 99 }}>
+      <a href='https://www.youtube.com/watch?v=Yhe7rcDUTeI' target='_blank' rel='noreferrer'>
+        why stickwhack?
+      </a>
+    </button>
+
+    <div style={{ position: 'fixed', bottom: 25, left: 50, zIndex: 99 }}>
+      <Link route='/' label='stickwhack' />
+    </div>
+
+    <div
+      style={{ position: 'fixed', bottom: 25, right: 50, zIndex: 99, display: 'flex', gap: '50px' }}
+    >
       <Link route='/about' label='about' />
       {/* <Link route='/gallery' label='gallery' />
       <Link route='/shop' label='shop' /> */}
     </div>
-  </div>
+  </>
 );

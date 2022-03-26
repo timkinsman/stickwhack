@@ -3,7 +3,7 @@ import styles from '../styles/Panel.module.scss';
 import { Sticker } from './Sticker';
 import { ReactComponent as ArrowLeft } from '../assets/arrow_left.svg';
 import { ReactComponent as ArrowRight } from '../assets/arrow_right.svg';
-import { ShowCase } from '../interfaces';
+import { Work } from '../interfaces';
 import { Link } from 'react-router-dom';
 
 interface PanelProps {
@@ -16,30 +16,28 @@ interface PanelProps {
     width?: string;
     rotate?: number;
   };
-  showCase: ShowCase;
+  work: Work;
 }
 
-export const Panel = ({ showCase, sticker }: PanelProps): JSX.Element => {
+export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
   const [pagination, setPagination] = useState(0);
 
   const handleOnClick = (next: number) =>
-    next < 0
-      ? setPagination(showCase.thumbs.length - 1)
-      : setPagination(next % showCase.thumbs.length);
+    next < 0 ? setPagination(work.thumbs.length - 1) : setPagination(next % work.thumbs.length);
 
   return (
     <div className={styles['container']}>
-      <div className={styles['left']} style={{ background: showCase.left, color: showCase.color }}>
-        <Link to={`/showCase/${showCase.id}`}>
-          <img src={showCase.logo} alt='logo' className={styles['logo']} />
+      <div className={styles['left']} style={{ background: work.left, color: work.color }}>
+        <Link to={`/work/${work.id}`}>
+          <img src={work.logo} alt='logo' className={styles['logo']} />
         </Link>
         <div className={styles['text-container']}>
-          <div className={styles['title']}>{showCase.title}</div>
-          <div className={styles['description']}>{showCase.desc}</div>
+          <div className={styles['title']}>{work.category}</div>
+          <div className={styles['description']}>{work.desc}</div>
         </div>
       </div>
 
-      <div className={styles['right']} style={{ background: showCase.right }}>
+      <div className={styles['right']} style={{ background: work.right }}>
         <button className={styles['button-left']} onClick={() => handleOnClick(pagination - 1)}>
           <ArrowLeft />
         </button>
@@ -50,12 +48,12 @@ export const Panel = ({ showCase, sticker }: PanelProps): JSX.Element => {
         <div
           className={styles['carousel-wrapper']}
           style={{
-            gridTemplateColumns: `repeat(${showCase.thumbs.length}, 1fr)`,
-            width: `${showCase.thumbs.length * 100}%`,
+            gridTemplateColumns: `repeat(${work.thumbs.length}, 1fr)`,
+            width: `${work.thumbs.length * 100}%`,
             left: `${pagination * -100}%`,
           }}
         >
-          {showCase.thumbs.map((thumb) => (
+          {work.thumbs.map((thumb) => (
             <div className={styles['thumb-container']}>
               <img className={styles['image']} alt='work' src={thumb} />
             </div>

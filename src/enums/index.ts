@@ -1,4 +1,4 @@
-export enum ShowCaseEnum {
+export enum Works {
   BRANDING_AND_APPAREL,
   FRINGE,
   BRANDING_AND_STATIONERY,
