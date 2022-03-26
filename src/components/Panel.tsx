@@ -27,17 +27,20 @@ export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
 
   return (
     <div className={styles['container']}>
-      <div className={styles['left']} style={{ background: work.left, color: work.color }}>
+      <div
+        className={styles['left']}
+        style={{ background: work.theme.primary, color: work.theme.color }}
+      >
         <Link to={`/work/${work.id}`}>
           <img src={work.logo} alt='logo' className={styles['logo']} />
         </Link>
         <div className={styles['text-container']}>
           <div className={styles['title']}>{work.category}</div>
-          <div className={styles['description']}>{work.desc}</div>
+          <div className={styles['description']}>{work.shortDescription}</div>
         </div>
       </div>
 
-      <div className={styles['right']} style={{ background: work.right }}>
+      <div className={styles['right']} style={{ background: work.theme.secondary }}>
         <button className={styles['button-left']} onClick={() => handleOnClick(pagination - 1)}>
           <ArrowLeft />
         </button>

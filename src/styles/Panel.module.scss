@@ -22,14 +22,6 @@
   margin: auto 0;
 }
 
-.thumb-container {
-  min-height: calc(100vh - 100px);
-  // padding: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .right {
   position: relative;
   min-height: 100vh;
@@ -73,7 +65,14 @@
   overflow: hidden;
 }
 
-.image {
+.thumb-container {
   height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
   width: 100%;
 }

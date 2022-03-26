@@ -21,12 +21,12 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
   }
 
   if (setActiveWork) setActiveWork(work);
-  $('body').css({ background: work.left });
+  $('body').css({ background: work?.theme?.primary });
 
   return (
     <div
       className={`${styles['container']} global-fadein`}
-      style={{ color: work?.color, paddingTop: '100px' }}
+      style={{ color: work?.theme?.color, paddingTop: '100px' }}
     >
       <div className={styles['larger-title']}>{work?.title}</div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
@@ -35,8 +35,8 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
           <div style={{ fontSize: '80px', marginBottom: '30px' }}>{work?.title}</div>
           <div style={{ fontSize: '37px', marginBottom: '92px' }}>{work?.category}</div>
           <div>
-            {work?.longDesc.map((longd) => (
-              <div style={{ fontSize: '35px', marginBottom: '52px' }}>{longd}</div>
+            {work?.longDescription.map((segment) => (
+              <div style={{ fontSize: '35px', marginBottom: '52px' }}>{segment}</div>
             ))}
           </div>
         </div>

@@ -15,10 +15,12 @@ export interface Work {
   subfeatures: string[];
   thumbs: string[];
   title: string;
-  desc: string;
-  left: string;
-  right: string;
-  color: string;
   category: string;
-  longDesc: string[];
+  shortDescription: string;
+  longDescription: string[];
+  theme: {
+    primary: string;
+    secondary: string;
+    color: string;
+  };
 }
