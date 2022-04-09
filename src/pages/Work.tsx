@@ -50,8 +50,8 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
         <img src={work?.feature} style={{ width: '100%' }} />
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-        {work?.subfeatures.map((subfeature) => (
-          <img src={subfeature} style={{ width: '100%' }} />
+        {work?.subFeatures.map((subFeature) => (
+          <img src={subFeature} style={{ width: '100%' }} />
         ))}
       </div>
     </div>

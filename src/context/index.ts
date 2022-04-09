@@ -1,24 +1,18 @@
 import { Work } from '../interfaces';
 import { Works } from '../enums';
 
-// assets
-import fstarter from '../assets/fstarter.png';
-import fringe from '../assets/fringe.png';
-import clowngirl from '../assets/clowngirl.png';
-import poll from '../assets/poll.png';
-import zeppyBig from '../assets/zeppyBig.png';
-import ADLF1 from '../assets/ADLF1.png';
-import ADLF2 from '../assets/ADLF2.png';
-import backzep from '../assets/backzep.png';
-import debs from '../assets/debs.png';
+import logoFringe from '../assets/logos/fringe.png'
+import logoBrandingAndApparel from '../assets/logos/brandingApparel.png'
+import logoBrandingAndStationery from '../assets/logos/branding.png'
+import logoIllustrationAndMerchDesign from '../assets/logos/illustrations.png'
 
 export const works: Work[] = [
   {
     id: Works.BRANDING_AND_APPAREL,
-    logo: fringe,
-    feature: zeppyBig,
-    thumbs: [backzep, backzep],
-    subfeatures: [backzep, backzep],
+    logo: logoBrandingAndApparel,
+    feature: '',
+    carouselImages: ['', ''],
+    subFeatures: ['', ''],
     category: 'branding and apparel',
     title: "lucky zep's",
     shortDescription:
@@ -36,10 +30,10 @@ export const works: Work[] = [
   },
   {
     id: Works.FRINGE,
-    logo: fringe,
-    feature: fstarter,
-    thumbs: [ADLF1, ADLF2],
-    subfeatures: [ADLF1, ADLF2],
+    logo: logoFringe,
+    feature: '',
+    carouselImages: ['', ''],
+    subFeatures: ['', ''],
     category: 'Adelaide Fringe Festival 2021 poster entry',
     title: 'firestarter',
     shortDescription:
@@ -56,10 +50,10 @@ export const works: Work[] = [
   },
   {
     id: Works.BRANDING_AND_STATIONERY,
-    logo: fringe,
-    feature: fstarter,
-    thumbs: [debs, debs],
-    subfeatures: [debs, debs],
+    logo: logoBrandingAndStationery,
+    feature: '',
+    carouselImages: ['', ''],
+    subFeatures: ['', ''],
     title: 'debbie slater',
     category: 'branding and stationery',
     shortDescription:
@@ -77,10 +71,10 @@ export const works: Work[] = [
   },
   {
     id: Works.ILLUSTRATION_AND_MERCH_DESIGN,
-    logo: clowngirl,
-    feature: fstarter,
-    thumbs: [poll, poll],
-    subfeatures: [poll, poll],
+    logo: logoIllustrationAndMerchDesign,
+    feature: '',
+    carouselImages: ['', ''],
+    subFeatures: ['', ''],
     category: 'illustration and merch design',
     title: 'like majima',
     shortDescription:

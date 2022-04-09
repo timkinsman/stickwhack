@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/Panel.module.scss';
 import { Sticker } from './Sticker';
-import { ReactComponent as ArrowLeft } from '../assets/arrow_left.svg';
-import { ReactComponent as ArrowRight } from '../assets/arrow_right.svg';
+import { ReactComponent as ArrowLeft } from '../assets/icons/arrowLeft.svg';
+import { ReactComponent as ArrowRight } from '../assets/icons/arrowRight.svg';
 import { Work } from '../interfaces';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
   const [pagination, setPagination] = useState(0);
 
   const handleOnClick = (next: number) =>
-    next < 0 ? setPagination(work.thumbs.length - 1) : setPagination(next % work.thumbs.length);
+    next < 0 ? setPagination(work.carouselImages.length - 1) : setPagination(next % work.carouselImages.length);
 
   return (
     <div className={styles['container']}>
@@ -51,12 +51,12 @@ export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
         <div
           className={styles['carousel-wrapper']}
           style={{
-            gridTemplateColumns: `repeat(${work.thumbs.length}, 1fr)`,
-            width: `${work.thumbs.length * 100}%`,
+            gridTemplateColumns: `repeat(${work.carouselImages.length}, 1fr)`,
+            width: `${work.carouselImages.length * 100}%`,
             left: `${pagination * -100}%`,
           }}
         >
-          {work.thumbs.map((thumb) => (
+          {work.carouselImages.map((thumb) => (
             <div className={styles['thumb-container']}>
               <img className={styles['image']} alt='work' src={thumb} />
             </div>

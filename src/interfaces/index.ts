@@ -12,8 +12,8 @@ export interface Work {
   id: number;
   logo: string;
   feature: string;
-  subfeatures: string[];
-  thumbs: string[];
+  subFeatures: string[];
+  carouselImages: string[];
   title: string;
   category: string;
   shortDescription: string;

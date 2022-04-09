@@ -1,6 +1,6 @@
 import styles from '../styles/Banner.module.scss';
 import $ from 'jquery';
-import smiley from '../assets/smiley.png';
+import smile from '../assets/stickers/smile.png';
 
 export const Banner = (): JSX.Element => {
   const handleOnClick = (id: string) =>
@@ -18,8 +18,8 @@ export const Banner = (): JSX.Element => {
           <div className={styles['heading']}>hello!</div>
           {[...Array(8)].map(() => (
             <img
-              className={styles['smiley']}
-              src={smiley}
+              className={styles['smile']}
+              src={smile}
               style={{ animationDelay: `${Math.random()}s` }}
             />
           ))}
