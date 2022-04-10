@@ -1,13 +1,14 @@
-import { Panel } from './Panel';
-import { works } from '../context';
-import { Works } from '../enums';
+import React from 'react';
+import Panel from './Panel';
+import { works } from '../../context';
+import { Works } from '../../enums';
 
 export default {
   title: 'Panel',
   component: Panel,
-  argTypes: { handleClick: { action: 'handleClick' } },
 };
 
+/* eslint-disable */
 const Template = (args) => <Panel {...args} />;
 
 export const BrandingAndApparel = Template.bind({});
