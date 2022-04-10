@@ -1,9 +1,5 @@
 @use './colors';
 
-html {
-  overflow-y: scroll;
-}
-
 body {
   margin: 0;
   font-family: Helvetica, sans-serif;
@@ -52,30 +48,30 @@ a {
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
+// /* Hide scrollbar for Chrome, Safari and Opera */
 // body::-webkit-scrollbar {
-//   width: 12px; /* width of the entire scrollbar */
+//   display: none;
 // }
 
-// body::-webkit-scrollbar-track {
-//   background: orange; /* color of the tracking area */
+// /* Hide scrollbar for IE, Edge and Firefox */
+// body {
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none; /* Firefox */
 // }
 
-// body::-webkit-scrollbar-thumb {
-//   background-color: colors.$majima-blue; /* color of the scroll thumb */
-//   border-radius: 20px; /* roundness of the scroll thumb */
-//   border: 3px solid orange; /* creates padding around scroll thumb */
-// }
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: orange; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: colors.$majima-blue; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid orange; /* creates padding around scroll thumb */
+}
 
 .global-fadein {
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */

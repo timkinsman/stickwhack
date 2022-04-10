@@ -34,8 +34,6 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-    '@typescript-eslint/naming-convention': 'off',
-    'no-underscore-dangle': 'off',
     '@typescript-eslint/dot-notation': 'off',
     'import/prefer-default-export': 'off',
     'react/function-component-definition': 'off',

@@ -72,8 +72,8 @@ export const works: Work[] = [
     id: Works.BRANDING_AND_STATIONERY,
     logo: logoBrandingAndStationery,
     feature: '',
-    carouselImages: ['', ''],
-    subFeatures: ['', ''],
+    carouselImages: [''],
+    subFeatures: [''],
     title: 'debbie slater',
     category: 'branding and stationery',
     shortDescription:

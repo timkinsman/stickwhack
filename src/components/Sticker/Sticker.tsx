@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { stickerPropTypes } from '../propTypes';
-import styles from '../styles/Sticker.module.scss';
+import { stickerPropTypes } from '../../propTypes';
+import styles from './Sticker.module.scss';
 
 const propTypes = {
   sticker: stickerPropTypes.isRequired,
@@ -9,7 +9,7 @@ const propTypes = {
 
 type StickerProps = PropTypes.InferProps<typeof propTypes>;
 
-export const Sticker = ({ sticker }: StickerProps): JSX.Element => (
+const Sticker = ({ sticker }: StickerProps): JSX.Element => (
   <img
     loading='lazy'
     className={styles['sticker']}
@@ -25,3 +25,5 @@ export const Sticker = ({ sticker }: StickerProps): JSX.Element => (
     }}
   />
 );
+
+export default Sticker;

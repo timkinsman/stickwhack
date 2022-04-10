@@ -1,9 +1,9 @@
 import React from 'react';
 import $ from 'jquery';
-import smile from '../assets/stickers/smile.png';
-import styles from '../styles/Banner.module.scss';
+import smile from '../../assets/stickers/smile.png';
+import styles from './Banner.module.scss';
 
-export const Banner = (): JSX.Element => {
+const Banner = (): JSX.Element => {
   const handleOnClick = (id: string) =>
     $('html,body').animate(
       {
@@ -40,3 +40,5 @@ export const Banner = (): JSX.Element => {
     </div>
   );
 };
+
+export default Banner;

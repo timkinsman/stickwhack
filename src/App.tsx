@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { About } from './components/About';
 import { AppContainer } from './components/AppContainer';
 import { Footer } from './components/Footer';
+import { Home } from './components/Home';
 import { Nav } from './components/Nav';
-import ScrollToTop from './components/ScrollToTop';
-import { About } from './pages/About';
-import { Home } from './pages/Home';
-import { Work } from './pages/Work';
-import { NotFound } from './pages/NotFound';
+import { NotFound } from './components/NotFound';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import { Work } from './components/Work';
 
-export const App = (): JSX.Element => (
+const App = (): JSX.Element => (
   <Router>
     <ScrollToTop>
       <AppContainer>
@@ -25,3 +25,5 @@ export const App = (): JSX.Element => (
     </ScrollToTop>
   </Router>
 );
+
+export default App;

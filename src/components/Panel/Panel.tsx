@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sticker } from './Sticker';
-import { stickerPropTypes, workPropsTypes } from '../propTypes';
-import { ReactComponent as ArrowLeft } from '../assets/icons/arrowLeft.svg';
-import { ReactComponent as ArrowRight } from '../assets/icons/arrowRight.svg';
-import styles from '../styles/Panel.module.scss';
+import { Sticker } from '../Sticker';
+import { stickerPropTypes, workPropsTypes } from '../../propTypes';
+import { ReactComponent as ArrowLeft } from '../../assets/icons/arrowLeft.svg';
+import { ReactComponent as ArrowRight } from '../../assets/icons/arrowRight.svg';
+import styles from './Panel.module.scss';
 
 const propTypes = {
   sticker: stickerPropTypes,
@@ -14,7 +14,7 @@ const propTypes = {
 
 type PanelProps = PropTypes.InferProps<typeof propTypes>;
 
-export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
+const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
   const [pagination, setPagination] = useState(0);
 
   const handleOnClick = (next: number) =>
@@ -38,20 +38,24 @@ export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
       </div>
 
       <div className={styles['right']} style={{ background: work.theme.secondary }}>
-        <button
-          type='button'
-          className={styles['button-left']}
-          onClick={() => handleOnClick(pagination - 1)}
-        >
-          <ArrowLeft />
-        </button>
-        <button
-          type='button'
-          className={styles['button-right']}
-          onClick={() => handleOnClick(pagination + 1)}
-        >
-          <ArrowRight />
-        </button>
+        {work.carouselImages.length > 1 && (
+          <>
+            <button
+              type='button'
+              className={styles['button-left']}
+              onClick={() => handleOnClick(pagination - 1)}
+            >
+              <ArrowLeft />
+            </button>
+            <button
+              type='button'
+              className={styles['button-right']}
+              onClick={() => handleOnClick(pagination + 1)}
+            >
+              <ArrowRight />
+            </button>
+          </>
+        )}
 
         <div
           className={styles['carousel-wrapper']}
@@ -61,9 +65,9 @@ export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
             left: `${pagination * -100}%`,
           }}
         >
-          {work.carouselImages.map((thumb) => (
-            <div className={styles['thumb-container']}>
-              <img className={styles['image']} alt='work' src={thumb} />
+          {work.carouselImages.map((image) => (
+            <div className={styles['image-container']}>
+              <img className={styles['image']} alt='carousel' src={image} />
             </div>
           ))}
         </div>
@@ -78,3 +82,5 @@ Panel.defaultProps = {
 };
 
 Panel.propTypes = propTypes;
+
+export default Panel;

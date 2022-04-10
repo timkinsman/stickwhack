@@ -1,4 +1,4 @@
-import { Panel } from '../components/Panel';
+import { Panel } from './Panel';
 import { works } from '../context';
 import { Works } from '../enums';
 

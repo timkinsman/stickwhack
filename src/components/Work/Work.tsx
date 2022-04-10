@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { useParams } from 'react-router';
 import { bindActionCreators, Dispatch } from 'redux';
 import $ from 'jquery';
-import { NotFound } from './NotFound';
-import { setActiveWorkAction } from '../actions/workAction';
-import { works } from '../context';
-import styles from '../styles/Work.module.scss';
-import { COLORS } from '../Theme';
+import { NotFound } from '../NotFound';
+import { setActiveWorkAction } from '../../actions/workAction';
+import { works } from '../../context';
+import styles from './Work.module.scss';
+import { COLORS } from '../../Theme';
 
 const propTypes = {
   setActiveWork: PropTypes.func.isRequired,
@@ -16,7 +16,7 @@ const propTypes = {
 
 type WorkProps = PropTypes.InferProps<typeof propTypes>;
 
-export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
+const Work = ({ setActiveWork }: WorkProps): JSX.Element => {
   const { id } = useParams();
   const activeWork = works.find((work) => work.id === Number(id));
 
@@ -60,7 +60,7 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         {activeWork?.subFeatures.map((subFeature) => (
           <img
-            alt='subFeature'
+            alt='sub feature'
             src={subFeature}
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
@@ -70,7 +70,7 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
   );
 };
 
-_Work.propTypes = propTypes;
+Work.propTypes = propTypes;
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
@@ -80,4 +80,4 @@ const mapDispatchToProps = (dispatch: Dispatch) =>
     dispatch,
   );
 
-export const Work = connect(null, mapDispatchToProps)(_Work);
+export default connect(null, mapDispatchToProps)(Work);

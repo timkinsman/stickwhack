@@ -1,10 +1,10 @@
 import React from 'react';
-import { Banner } from '../components/Banner';
-import { Panel } from '../components/Panel';
-import { works } from '../context';
-import styles from '../styles/Home.module.scss';
+import { Banner } from '../Banner';
+import { Panel } from '../Panel';
+import { works } from '../../context';
+import styles from './Home.module.scss';
 
-export const Home = (): JSX.Element => (
+const Home = (): JSX.Element => (
   <div className='global-fadein'>
     <Banner />
     <div style={{ height: '100vh' }} />
@@ -15,3 +15,5 @@ export const Home = (): JSX.Element => (
     </div>
   </div>
 );
+
+export default Home;
