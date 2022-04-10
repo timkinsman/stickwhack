@@ -1,45 +1,22 @@
-.container {
-  right: 0;
-  bottom: 0;
+.whyStickwhack {
   position: fixed;
-  width: calc(100% - 100px);
-  padding: 0 50px;
-  min-height: 70px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 2;
-  font-size: 2em;
-  color: blue;
-  align-items: flex-start;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  letter-spacing: 2.5px;
-}
-
-.selected {
-  // text-decoration: underline;
-  // border-bottom: 4px solid currentColor;
-  font-family: swear-display-cilati;
-  font-weight: 700;
+  top: 25px;
+  right: 50px;
+  z-index: 99;
 }
 
 .stickwhack {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  display: flex;
-  align-items: flex-end;
-  font-style: italic;
-  letter-spacing: 5px;
-  padding-top: 78px;
+  position: fixed;
+  bottom: 25px;
+  left: 50px;
+  z-index: 99;
 }
 
-.logo {
-  height: 350px;
+.links {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 25px;
+  right: 50px;
+  z-index: 99;
+  display: flex;
+  gap: 50px;
 }

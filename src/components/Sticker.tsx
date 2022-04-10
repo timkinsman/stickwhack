@@ -1,19 +1,26 @@
-import { Sticker as StickerProps } from '../interfaces';
+import PropTypes from 'prop-types';
+import { stickerPropTypes } from '../propTypes';
 import styles from '../styles/Sticker.module.scss';
 
-export const Sticker = (props: StickerProps): JSX.Element => (
+const propTypes = {
+  sticker: stickerPropTypes.isRequired,
+};
+
+type StickerProps = PropTypes.InferProps<typeof propTypes>;
+
+export const Sticker = ({ sticker }: StickerProps): JSX.Element => (
   <img
     loading='lazy'
     className={styles['sticker']}
-    src={props.image}
+    src={sticker.image}
     alt='sticker'
     style={{
-      top: props.top,
-      right: props.right,
-      bottom: props.bottom,
-      left: props.left,
-      width: props.width ? props.width : '200px',
-      transform: 'rotate(' + props.rotate + 'deg)',
+      top: sticker?.top || undefined,
+      right: sticker?.right || undefined,
+      bottom: sticker?.bottom || undefined,
+      left: sticker?.left || undefined,
+      width: sticker?.width ? sticker?.width : '200px',
+      transform: 'rotate(' + sticker?.rotate || 0 + 'deg)',
     }}
   />
 );

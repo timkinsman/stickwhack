@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useParams } from 'react-router';
 import { works } from '../context';
 import { NotFound } from './NotFound';
@@ -8,9 +9,11 @@ import { connect } from 'react-redux';
 import { useEffect } from 'react';
 import $ from 'jquery';
 
-interface WorkProps {
-  setActiveWork?: Function;
-}
+const propTypes = {
+  setActiveWork: PropTypes.func,
+};
+
+type WorkProps = PropTypes.InferProps<typeof propTypes>;
 
 export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
   const { id } = useParams();
@@ -38,7 +41,7 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
       <div className={styles['larger-title']}>{work?.title}</div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         <div style={{ padding: '0 50px' }}>
-          <img src={work?.logo} style={{ marginBottom: '63px' }} />
+          <img src={work?.logo} style={{ marginBottom: '63px', maxWidth: '220px' }} />
           <div style={{ fontSize: '80px', marginBottom: '30px' }}>{work?.title}</div>
           <div style={{ fontSize: '37px', marginBottom: '92px' }}>{work?.category}</div>
           <div>
@@ -51,12 +54,14 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         {work?.subFeatures.map((subFeature) => (
-          <img src={subFeature} style={{ width: '100%' }} />
+          <img src={subFeature} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         ))}
       </div>
     </div>
   );
 };
+
+_Work.propTypes = propTypes;
 
 const mapDispatchToProps = (dispatch: any) =>
   bindActionCreators(

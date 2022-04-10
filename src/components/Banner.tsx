@@ -1,6 +1,7 @@
-import styles from '../styles/Banner.module.scss';
+import React from 'react';
 import $ from 'jquery';
 import smile from '../assets/stickers/smile.png';
+import styles from '../styles/Banner.module.scss';
 
 export const Banner = (): JSX.Element => {
   const handleOnClick = (id: string) =>
@@ -27,7 +28,7 @@ export const Banner = (): JSX.Element => {
         <div className={styles['subheading']}>
           my name is kesha (aka stickwhack){' '}
           <button className={styles['button']} onClick={() => handleOnClick('#panel-container')}>
-            and i’m a graphic designer/illustrator
+            i’m a graphic designer/illustrator
           </button>
         </div>
       </div>
