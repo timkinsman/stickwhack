@@ -1,2 +1,7 @@
-$midnight-blue: #2a0fff;
-$sand: #fae5c2;
+$majima-blue: #2a0fff;
+$majima-sand: #fae5c2;
+
+:export {
+  majimaBlue: $majima-blue;
+  majimasand: $majima-sand;
+}

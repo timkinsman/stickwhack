@@ -1,14 +1,13 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { About } from './pages/About';
-import { Home } from './pages/Home';
-import { Nav } from './components/Nav';
-// import { Shop } from './pages/Shop';
-import { Work } from './pages/Work';
-// import { Gallery } from './pages/Gallery';
-import { NotFound } from './pages/NotFound';
-import ScrollToTop from './components/ScrollToTop';
 import { AppContainer } from './components/AppContainer';
 import { Footer } from './components/Footer';
+import { Nav } from './components/Nav';
+import ScrollToTop from './components/ScrollToTop';
+import { About } from './pages/About';
+import { Home } from './pages/Home';
+import { Work } from './pages/Work';
+import { NotFound } from './pages/NotFound';
 
 export const App = (): JSX.Element => (
   <Router>
@@ -16,12 +15,10 @@ export const App = (): JSX.Element => (
       <AppContainer>
         <Nav />
         <Routes>
-          <Route path='/work/:id' element={<Work />}></Route>
-          <Route path='/about' element={<About />}></Route>
-          {/* <Route path='/gallery' element={<Gallery />}></Route>
-          <Route path='/shop' element={<Shop />}></Route> */}
-          <Route path='/' element={<Home />}></Route>
-          <Route path='*' element={<NotFound />}></Route>
+          <Route path='/work/:id' element={<Work />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/' element={<Home />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
       </AppContainer>

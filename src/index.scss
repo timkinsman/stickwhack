@@ -12,8 +12,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: colors.$sand;
-  color: colors.$midnight-blue;
+  background: colors.$majima-sand;
+  color: colors.$majima-blue;
 
   cursor: default;
 }
@@ -41,7 +41,7 @@ input[type='reset'] {
 a {
   text-decoration: none;
   cursor: pointer !important;
-  color: colors.$midnight-blue;
+  color: colors.$majima-blue;
   line-height: 44px;
   font-size: 30px;
 
@@ -59,8 +59,8 @@ body::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 // body::-webkit-scrollbar {
@@ -72,7 +72,7 @@ body {
 // }
 
 // body::-webkit-scrollbar-thumb {
-//   background-color: colors.$midnight-blue; /* color of the scroll thumb */
+//   background-color: colors.$majima-blue; /* color of the scroll thumb */
 //   border-radius: 20px; /* roundness of the scroll thumb */
 //   border: 3px solid orange; /* creates padding around scroll thumb */
 // }

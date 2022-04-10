@@ -18,12 +18,12 @@ import fringeFeature from '../assets/firestarter/feature.png';
 
 import pollinate from '../assets/illustrations/pollinate.png';
 import rodeo from '../assets/illustrations/rodeo.png';
-import rodeoTote from '../assets/illustrations/rodeoTote.png';
+// import rodeoTote from '../assets/illustrations/rodeoTote.png';
 import phoneRed from '../assets/illustrations/phoneRed.png';
 import phoneYellow from '../assets/illustrations/phoneYellow.png';
 import frenchPress from '../assets/illustrations/frenchPress.png';
 import sumo from '../assets/illustrations/sumo.png';
-import burntOut from '../assets/illustrations/burntOut.png';
+// import burntOut from '../assets/illustrations/burntOut.png';
 import burntOutRed from '../assets/illustrations/burntOutRed.png';
 
 export const works: Work[] = [
@@ -32,7 +32,7 @@ export const works: Work[] = [
     logo: logoBrandingAndApparel,
     feature: zepFeature,
     carouselImages: [zepShirtFront, zepShirtBack],
-    subFeatures: ['', ''],
+    subFeatures: [zepShirtFront, zepShirtBack],
     category: 'branding and apparel',
     title: "lucky zep's",
     shortDescription:
@@ -53,7 +53,7 @@ export const works: Work[] = [
     logo: logoFringe,
     feature: fringeFeature,
     carouselImages: [fringeShirtFront, fringeShirtBack],
-    subFeatures: ['', ''],
+    subFeatures: [fringeShirtFront, fringeShirtBack],
     category: 'Adelaide Fringe Festival 2021 poster entry',
     title: 'firestarter',
     shortDescription:

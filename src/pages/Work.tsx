@@ -1,60 +1,69 @@
 import PropTypes from 'prop-types';
-import { useParams } from 'react-router';
-import { works } from '../context';
-import { NotFound } from './NotFound';
-import styles from '../styles/Work.module.scss';
-import { setActiveWorkAction } from '../actions/workAction';
-import { bindActionCreators } from 'redux';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useEffect } from 'react';
+import { useParams } from 'react-router';
+import { bindActionCreators, Dispatch } from 'redux';
 import $ from 'jquery';
+import { NotFound } from './NotFound';
+import { setActiveWorkAction } from '../actions/workAction';
+import { works } from '../context';
+import styles from '../styles/Work.module.scss';
+import { COLORS } from '../Theme';
 
 const propTypes = {
-  setActiveWork: PropTypes.func,
+  setActiveWork: PropTypes.func.isRequired,
 };
 
 type WorkProps = PropTypes.InferProps<typeof propTypes>;
 
 export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
   const { id } = useParams();
-  const work = works.find((work) => work.id === Number(id));
+  const activeWork = works.find((work) => work.id === Number(id));
 
   useEffect(() => {
     return () => {
-      setActiveWork && setActiveWork(null);
-      $('body').css({ background: '#fae5c2', color: '#2a0fff' });
+      setActiveWork(null);
+      $('body').css({ background: COLORS.majimaSand, color: COLORS.majimaBlue });
     };
-  }, []);
+  }, [setActiveWork]);
 
-  if (!work) {
+  if (!activeWork) {
     return <NotFound />;
   }
 
-  if (setActiveWork) setActiveWork(work);
-  $('body').css({ background: work?.theme?.primary });
+  setActiveWork(activeWork);
+  $('body').css({ background: activeWork?.theme?.primary });
 
   return (
     <div
       className={`${styles['container']} global-fadein`}
-      style={{ color: work?.theme?.color, paddingTop: '100px' }}
+      style={{ color: activeWork?.theme?.color, paddingTop: '100px' }}
     >
-      <div className={styles['larger-title']}>{work?.title}</div>
+      <div className={styles['larger-title']}>{activeWork?.title}</div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         <div style={{ padding: '0 50px' }}>
-          <img src={work?.logo} style={{ marginBottom: '63px', maxWidth: '220px' }} />
-          <div style={{ fontSize: '80px', marginBottom: '30px' }}>{work?.title}</div>
-          <div style={{ fontSize: '37px', marginBottom: '92px' }}>{work?.category}</div>
+          <img
+            alt='logo'
+            src={activeWork?.logo}
+            style={{ marginBottom: '63px', maxWidth: '220px' }}
+          />
+          <div style={{ fontSize: '80px', marginBottom: '30px' }}>{activeWork?.title}</div>
+          <div style={{ fontSize: '37px', marginBottom: '92px' }}>{activeWork?.category}</div>
           <div>
-            {work?.longDescription.map((segment) => (
+            {activeWork?.longDescription.map((segment) => (
               <div style={{ fontSize: '35px', marginBottom: '52px' }}>{segment}</div>
             ))}
           </div>
         </div>
-        <img src={work?.feature} style={{ width: '100%' }} />
+        <img alt='feature' src={activeWork?.feature} style={{ width: '100%' }} />
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-        {work?.subFeatures.map((subFeature) => (
-          <img src={subFeature} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        {activeWork?.subFeatures.map((subFeature) => (
+          <img
+            alt='subFeature'
+            src={subFeature}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
         ))}
       </div>
     </div>
@@ -63,7 +72,7 @@ export const _Work = ({ setActiveWork }: WorkProps): JSX.Element => {
 
 _Work.propTypes = propTypes;
 
-const mapDispatchToProps = (dispatch: any) =>
+const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
       setActiveWork: setActiveWorkAction,

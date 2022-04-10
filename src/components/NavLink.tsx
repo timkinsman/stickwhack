@@ -23,6 +23,7 @@ export const NavLink = ({ route, label }: NavLinkProps) => {
     );
 
   return location.pathname === route ? (
+    /* eslint-disable */
     <a onClick={handleOnClick} className={styles['selected']}>
       {label}
     </a>

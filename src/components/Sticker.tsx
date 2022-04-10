@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { stickerPropTypes } from '../propTypes';
 import styles from '../styles/Sticker.module.scss';
@@ -19,8 +20,8 @@ export const Sticker = ({ sticker }: StickerProps): JSX.Element => (
       right: sticker?.right || undefined,
       bottom: sticker?.bottom || undefined,
       left: sticker?.left || undefined,
-      width: sticker?.width ? sticker?.width : '200px',
-      transform: 'rotate(' + sticker?.rotate || 0 + 'deg)',
+      width: sticker?.width || '200px',
+      transform: `rotate(${sticker?.rotate || 0}deg)`,
     }}
   />
 );

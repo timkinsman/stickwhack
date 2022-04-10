@@ -28,13 +28,8 @@ export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
         className={styles['left']}
         style={{ background: work.theme.primary, color: work.theme.color }}
       >
-        <Link to={`/work/${work.id}`}>
-          <img
-            src={work.logo}
-            alt='logo'
-            className={styles['logo']}
-            style={{ marginTop: work.id === 2 ? '-50px' : undefined }}
-          />
+        <Link to={`/work/${work.id}`} style={{ marginTop: 'auto' }}>
+          <img src={work.logo} alt='logo' className={styles['logo']} />
         </Link>
         <div className={styles['text-container']}>
           <div className={styles['title']}>{work.category}</div>
@@ -43,10 +38,18 @@ export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
       </div>
 
       <div className={styles['right']} style={{ background: work.theme.secondary }}>
-        <button className={styles['button-left']} onClick={() => handleOnClick(pagination - 1)}>
+        <button
+          type='button'
+          className={styles['button-left']}
+          onClick={() => handleOnClick(pagination - 1)}
+        >
           <ArrowLeft />
         </button>
-        <button className={styles['button-right']} onClick={() => handleOnClick(pagination + 1)}>
+        <button
+          type='button'
+          className={styles['button-right']}
+          onClick={() => handleOnClick(pagination + 1)}
+        >
           <ArrowRight />
         </button>
 
@@ -68,6 +71,10 @@ export const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
       {sticker && <Sticker sticker={sticker} />}
     </div>
   );
+};
+
+Panel.defaultProps = {
+  sticker: null,
 };
 
 Panel.propTypes = propTypes;

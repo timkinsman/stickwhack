@@ -4,7 +4,7 @@ import styles from '../styles/Nav.module.scss';
 
 export const Nav = (): JSX.Element => (
   <>
-    <button className={styles['whyStickwhack']}>
+    <button type='button' className={styles['whyStickwhack']}>
       <a href='https://www.youtube.com/watch?v=Yhe7rcDUTeI' target='_blank' rel='noreferrer'>
         why stickwhack?
       </a>

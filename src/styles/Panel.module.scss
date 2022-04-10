@@ -43,7 +43,7 @@
 }
 
 .text-container {
-  margin-top: auto;
+  margin-top: 100px;
   max-width: 700px;
 }
 
@@ -83,7 +83,6 @@
   object-fit: cover;
   transition: transform 1s;
 }
-
 
 .image:hover {
   transform: scale(1.05);

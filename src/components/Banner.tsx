@@ -19,6 +19,7 @@ export const Banner = (): JSX.Element => {
           <div className={styles['heading']}>hello!</div>
           {[...Array(8)].map(() => (
             <img
+              alt='smile'
               className={styles['smile']}
               src={smile}
               style={{ animationDelay: `${Math.random()}s` }}
@@ -27,7 +28,11 @@ export const Banner = (): JSX.Element => {
         </div>
         <div className={styles['subheading']}>
           my name is kesha (aka stickwhack){' '}
-          <button className={styles['button']} onClick={() => handleOnClick('#panel-container')}>
+          <button
+            type='button'
+            className={styles['button']}
+            onClick={() => handleOnClick('#panel-container')}
+          >
             i’m a graphic designer/illustrator
           </button>
         </div>

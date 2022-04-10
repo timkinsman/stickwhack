@@ -24,3 +24,7 @@ export interface Work {
     color: string;
   };
 }
+
+export interface State {
+  work?: Work;
+}
