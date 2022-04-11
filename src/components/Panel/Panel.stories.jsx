@@ -1,5 +1,5 @@
 import React from 'react';
-import Panel from './Panel';
+import { Panel } from '.';
 import { works } from '../../context';
 import { Works } from '../../enums';
 

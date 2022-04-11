@@ -66,7 +66,7 @@ const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
           }}
         >
           {work.carouselImages.map((image) => (
-            <div className={styles['image-container']}>
+            <div key={image} className={styles['image-container']}>
               <img className={styles['image']} alt='carousel' src={image} />
             </div>
           ))}
