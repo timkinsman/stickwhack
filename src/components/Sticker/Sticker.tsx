@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { stickerPropTypes } from '../../propTypes';
+import { stickerPropTypes } from '../../actions';
 import styles from './Sticker.module.scss';
 
 const propTypes = {

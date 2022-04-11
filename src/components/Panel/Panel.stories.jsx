@@ -13,20 +13,20 @@ const Template = (args) => <Panel {...args} />;
 
 export const BrandingAndApparel = Template.bind({});
 BrandingAndApparel.args = {
-  work: works.find((work) => work.id === Works.BRANDING_AND_APPAREL),
+  work: works.find((work) => work.id === Works.brandingAndApparel),
 };
 
 export const Fringe = Template.bind({});
 Fringe.args = {
-  work: works.find((work) => work.id === Works.FRINGE),
+  work: works.find((work) => work.id === Works.fringe),
 };
 
 export const BrandingAndStationery = Template.bind({});
 BrandingAndStationery.args = {
-  work: works.find((work) => work.id === Works.BRANDING_AND_STATIONERY),
+  work: works.find((work) => work.id === Works.brandingAndStationery),
 };
 
 export const IllustrationAndMerchDesign = Template.bind({});
 IllustrationAndMerchDesign.args = {
-  work: works.find((work) => work.id === Works.ILLUSTRATION_AND_MERCH_DESIGN),
+  work: works.find((work) => work.id === Works.illustrationAndMerchDesign),
 };

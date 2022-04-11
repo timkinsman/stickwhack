@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import { State } from '../../interfaces';
+import { StoreState } from '../../reducers';
 import styles from './Footer.module.scss';
 
 const propTypes = {
@@ -22,7 +22,7 @@ Footer.defaultProps = {
 
 Footer.propTypes = propTypes;
 
-const mapStateToProps = (state: State) => ({
+const mapStateToProps = (state: StoreState) => ({
   workTitle: state?.work?.title,
 });
 

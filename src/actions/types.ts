@@ -1,1 +1,7 @@
-export const SET_ACTIVE_WORK = 'SET_ACTIVE_WORK';
+import { SetActiveWorkAction } from './work';
+
+export enum ActionTypes {
+  setActiveWork,
+}
+
+export type Action = SetActiveWorkAction;

@@ -37,5 +37,7 @@ module.exports = {
     '@typescript-eslint/dot-notation': 'off',
     'import/prefer-default-export': 'off',
     'react/function-component-definition': 'off',
+    'import/no-cycle': 'off',
+    '@typescript-eslint/no-shadow': 'off',
   },
 };

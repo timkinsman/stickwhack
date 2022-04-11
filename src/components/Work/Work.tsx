@@ -5,7 +5,7 @@ import { useParams } from 'react-router';
 import { bindActionCreators, Dispatch } from 'redux';
 import $ from 'jquery';
 import { NotFound } from '../NotFound';
-import { setActiveWorkAction } from '../../actions/workAction';
+import { setActiveWork } from '../../actions';
 import { works } from '../../context';
 import styles from './Work.module.scss';
 import { COLORS } from '../../Theme';
@@ -75,7 +75,7 @@ Work.propTypes = propTypes;
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
-      setActiveWork: setActiveWorkAction,
+      setActiveWork,
     },
     dispatch,
   );

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sticker } from '../Sticker';
-import { stickerPropTypes, workPropsTypes } from '../../propTypes';
+import { stickerPropTypes, workPropsTypes } from '../../actions';
 import { ReactComponent as ArrowLeft } from '../../assets/icons/arrowLeft.svg';
 import { ReactComponent as ArrowRight } from '../../assets/icons/arrowRight.svg';
 import styles from './Panel.module.scss';

@@ -1,5 +1,4 @@
-import { Work } from '../interfaces';
-import { Works } from '../enums';
+import { Work, Works } from '../actions';
 
 import logoFringe from '../assets/logos/fringe.png';
 import logoBrandingAndApparel from '../assets/logos/brandingApparel.png';
@@ -28,7 +27,7 @@ import burntOutRed from '../assets/illustrations/burntOutRed.png';
 
 export const works: Work[] = [
   {
-    id: Works.BRANDING_AND_APPAREL,
+    id: Works.brandingAndApparel,
     logo: logoBrandingAndApparel,
     feature: zepFeature,
     carouselImages: [zepShirtFront, zepShirtBack],
@@ -49,7 +48,7 @@ export const works: Work[] = [
     },
   },
   {
-    id: Works.FRINGE,
+    id: Works.fringe,
     logo: logoFringe,
     feature: fringeFeature,
     carouselImages: [fringeShirtFront, fringeShirtBack],
@@ -69,7 +68,7 @@ export const works: Work[] = [
     },
   },
   {
-    id: Works.BRANDING_AND_STATIONERY,
+    id: Works.brandingAndStationery,
     logo: logoBrandingAndStationery,
     feature: '',
     carouselImages: [''],
@@ -90,7 +89,7 @@ export const works: Work[] = [
     },
   },
   {
-    id: Works.ILLUSTRATION_AND_MERCH_DESIGN,
+    id: Works.illustrationAndMerchDesign,
     logo: logoIllustrationAndMerchDesign,
     feature: pollinate,
     carouselImages: [pollinate, rodeo, phoneRed, phoneYellow, frenchPress, sumo, burntOutRed],
