@@ -30,8 +30,13 @@
     "deploy:dev": "yarn build && yarn s3-deploy:dev && yarn cloudfront-invalidation:dev",
     "cloudfront-invalidation:prod": "aws cloudfront create-invalidation --distribution-id E17FATCAHMZIB7 --paths '/*'",
     "s3-deploy:prod": "aws s3 sync build/ s3://prod-stickwhack",
-    "deploy:prod": "yarn build && yarn s3-deploy:prod && yarn cloudfront-invalidation:prod"
+    "deploy:prod": "yarn build && yarn s3-deploy:prod && yarn cloudfront-invalidation:prod",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "pre-commit": [
+    "precommit-msg",
+    "format"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -91,6 +96,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.6.2",
     "webpack": "^5.72.0"
   }

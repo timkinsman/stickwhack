@@ -1,7 +1,7 @@
 import { SetActiveWorkAction } from './work';
 
 export enum ActionTypes {
-  setActiveWork,
+  setActiveWork,  
 }
 
 export type Action = SetActiveWorkAction;
