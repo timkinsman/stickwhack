@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the prod branch
   push:
-    branches: [ prod ]
+    branches: [ prod, dev ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,8 +25,22 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: yarn && yarn deploy:prod
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'ap-southeast-2'
+        run: yarn
+
+      if: github.ref == 'refs/heads/prod'
+        steps:
+        - name: Deploy prod
+          run: yarn deploy:prod
+          env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            AWS_DEFAULT_REGION: 'ap-southeast-2'
+
+      if: github.ref == 'refs/heads/dev'
+        steps:
+        - name: Deploy dev
+          run: yarn deploy:dev
+          env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            AWS_DEFAULT_REGION: 'ap-southeast-2'
