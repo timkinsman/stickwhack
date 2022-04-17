@@ -28,8 +28,8 @@ jobs:
         run: yarn install
       - name: Run Lint
         run: yarn run lint
-      - name: Build
-        run: yarn run build
+#      - name: Build
+#        run: yarn run build
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
