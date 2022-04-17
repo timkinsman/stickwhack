@@ -28,8 +28,8 @@
     "s3-deploy:dev": "aws s3 sync build/ s3://dev-stickwhack",
     "cloudfront-invalidation:dev": "aws cloudfront create-invalidation --distribution-id ES98HQ4NNATUX --paths \/*",
     "deploy:dev": "yarn build && yarn s3-deploy:dev && yarn cloudfront-invalidation:dev",
-    "cloudfront-invalidation:prod": "aws cloudfront create-invalidation --distribution-id E17FATCAHMZIB7 --paths \/*",
-    "s3-deploy:prod": "aws s3 sync build/ s3://prod-stickwhack",
+    "cloudfront-invalidation:prod": "aws cloudfront create-invalidation --distribution-id E17FATCAHMZIB7 --paths \/* --region ap-southeast-2",
+    "s3-deploy:prod": "aws s3 sync build/ s3://prod-stickwhack --region ap-southeast-2",
     "deploy:prod": "yarn build && yarn s3-deploy:prod && yarn cloudfront-invalidation:prod",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
