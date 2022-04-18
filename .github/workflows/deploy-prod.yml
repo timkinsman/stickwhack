@@ -1,4 +1,4 @@
-name: Deploy prod
+name: Build & deploy prod
 
 on:
   push:
@@ -9,21 +9,33 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - name: Cache modules
+        uses: actions/cache@v1
+        id: yarn-cache
         with:
-          node-version: 16
-      - name: Install dependencies
-        run: yarn
-      - name: Run Format
-        run: yarn format
-      - name: Run Lint
-        run: yarn lint
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-southeast-2
-      - name: Deploy
-        run: yarn deploy:prod
+          aws-region: ${{ secrets.AWS_REGION }}
+#      - uses: actions/setup-node@v2
+#        with:
+#          node-version: 16
+      - name: Install dependencies
+        run: yarn
+#      - name: Create env file
+#        run: |
+#          touch .env
+#          echo API_ENDPOINT="https://xxx.execute-api.us-west-2.amazonaws.com" >> .env
+#          echo API_KEY=${{ secrets.API_KEY }} >> .env
+      - name: Build
+        run: yarn build
+      - name: S3 Deploy
+        run: aws s3 sync build/ s3://${{ secrets.AWS_PROD_S3_BUCKET_NAME }}
+      - name: Cloudfront Invalidation
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_PROD_CLOUDFRONT_DISTRIBUTION_ID }} --paths \/*
