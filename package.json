@@ -23,6 +23,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "s3-deploy:dev": "aws s3 sync build/ s3://dev-stickwhack",
@@ -30,12 +31,12 @@
     "deploy:dev": "yarn build && yarn s3-deploy:dev && yarn cloudfront-invalidation:dev",
     "cloudfront-invalidation:prod": "aws cloudfront create-invalidation --distribution-id E17FATCAHMZIB7 --paths \/*",
     "s3-deploy:prod": "aws s3 sync build/ s3://prod-stickwhack",
-    "deploy:prod": "yarn build && yarn s3-deploy:prod && yarn cloudfront-invalidation:prod",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "deploy:prod": "yarn build && yarn s3-deploy:prod && yarn cloudfront-invalidation:prod"
   },
   "pre-commit": [
     "precommit-msg",
-    "format"
+    "format",
+    "lint"
   ],
   "eslintConfig": {
     "extends": [
