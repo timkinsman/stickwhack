@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
@@ -29,13 +30,13 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
-			- name: S3 deploy & cloudfront invalidation for dev branch
-			  if: ${{ github.ref == 'refs/heads/dev' }}
-			  run: |
-					aws s3 sync build/ s3://${{ secrets.AWS_DEV_S3_BUCKET_NAME }}
-					aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DEV_CLOUDFRONT_DISTRIBUTION_ID }} --paths \/*
-			- name: S3 deploy & cloudfront invalidation for prod branch
-			  if: ${{ github.ref == 'refs/heads/prod' }}
-			  run: |
-					aws s3 sync build/ s3://${{ secrets.AWS_PROD_S3_BUCKET_NAME }}
-					aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_PROD_CLOUDFRONT_DISTRIBUTION_ID }} --paths \/*
+      - name: S3 deploy & cloudfront invalidation for dev branch
+        if: ${{ github.ref == 'refs/heads/dev' }}
+        run: |
+	  aws s3 sync build/ s3://${{ secrets.AWS_DEV_S3_BUCKET_NAME }}
+	  aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DEV_CLOUDFRONT_DISTRIBUTION_ID }} --paths \/*
+      - name: S3 deploy & cloudfront invalidation for prod branch
+        if: ${{ github.ref == 'refs/heads/prod' }}
+        run: |
+          aws s3 sync build/ s3://${{ secrets.AWS_PROD_S3_BUCKET_NAME }}
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_PROD_CLOUDFRONT_DISTRIBUTION_ID }} --paths \/*
