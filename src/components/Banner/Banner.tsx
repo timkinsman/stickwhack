@@ -4,8 +4,8 @@ import smile from '../../assets/stickers/smile.png';
 import useStyles from './BannerStyles';
 
 const Banner = (): JSX.Element => {
-  const classes = useStyles()
-  
+  const classes = useStyles();
+
   const handleOnClick = (id: string) =>
     $('html,body').animate(
       {

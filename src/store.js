@@ -1,5 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
+// eslint-disable-next-line
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
 

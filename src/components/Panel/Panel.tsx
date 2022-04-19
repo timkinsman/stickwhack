@@ -15,7 +15,7 @@ const propTypes = {
 type PanelProps = PropTypes.InferProps<typeof propTypes>;
 
 const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
-  const classes = useStyles()
+  const classes = useStyles();
   const [pagination, setPagination] = useState(0);
 
   const handleOnClick = (next: number) =>

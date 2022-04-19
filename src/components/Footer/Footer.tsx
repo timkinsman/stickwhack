@@ -11,12 +11,14 @@ const propTypes = {
 type FooterProps = PropTypes.InferProps<typeof propTypes>;
 
 const Footer = ({ workTitle }: FooterProps): JSX.Element => {
-  const classes = useStyles()
-  return(
-  <div className={classes.container}>
-    <div className={classes.heading}>{workTitle}</div>
-  </div>
-)};
+  const classes = useStyles();
+
+  return (
+    <div className={classes.container}>
+      <div className={classes.heading}>{workTitle}</div>
+    </div>
+  );
+};
 
 Footer.defaultProps = {
   workTitle: null,

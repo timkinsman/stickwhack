@@ -1,7 +1,7 @@
 import React from 'react';
 import { Panel } from '.';
+import { Works } from '../../actions';
 import { works } from '../../context';
-import { Works } from '../../enums';
 
 export default {
   title: 'Panel',
