@@ -12,6 +12,7 @@
     "react-router-dom": "^6.0.2",
     "react-scripts": "5.0.0",
     "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
     "sass": "^1.43.4",
     "typescript": "^4.6.3"
@@ -23,21 +24,16 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
-    "s3-deploy:dev": "aws s3 sync build/ s3://dev-stickwhack",
-    "cloudfront-invalidation:dev": "aws cloudfront create-invalidation --distribution-id ES98HQ4NNATUX --paths \/*",
-    "deploy:dev": "yarn build && yarn s3-deploy:dev && yarn cloudfront-invalidation:dev",
-    "cloudfront-invalidation:prod": "aws cloudfront create-invalidation --distribution-id E17FATCAHMZIB7 --paths \/*",
-    "s3-deploy:prod": "aws s3 sync build/ s3://prod-stickwhack",
-    "deploy:prod": "yarn build && yarn s3-deploy:prod && yarn cloudfront-invalidation:prod"
+    "prepare": "husky install"
   },
-  "pre-commit": [
-    "precommit-msg",
-    "format",
-    "lint"
-  ],
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -97,7 +93,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
-    "pre-commit": "^1.2.2",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.8",
     "prettier": "^2.6.2",
     "webpack": "^5.72.0"
   }
