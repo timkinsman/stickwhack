@@ -5,17 +5,19 @@ import { works } from '../../context';
 import useStyles from './HomeStyles';
 
 const Home = (): JSX.Element => {
-  const classes = useStyles()
-  return(
-  <div className='global-fadein'>
-    <Banner />
-    <div style={{ height: '100vh' }} />
-    <div className={classes.panelContainer} id='panel-container'>
-      {works?.map((work) => (
-        <Panel work={work} />
-      ))}
+  const classes = useStyles();
+
+  return (
+    <div className='global-fadein'>
+      <Banner />
+      <div style={{ height: '100vh' }} />
+      <div className={classes.panelContainer} id='panel-container'>
+        {works?.map((work) => (
+          <Panel work={work} />
+        ))}
+      </div>
     </div>
-  </div>
-)};
+  );
+};
 
 export default Home;
