@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { StoreState } from '../../reducers';
-import styles from './Footer.module.scss';
+import useStyles from './FooterStyles';
 
 const propTypes = {
   workTitle: PropTypes.string,
@@ -10,11 +10,13 @@ const propTypes = {
 
 type FooterProps = PropTypes.InferProps<typeof propTypes>;
 
-const Footer = ({ workTitle }: FooterProps): JSX.Element => (
-  <div className={styles['container']}>
-    <div className={styles['heading']}>{workTitle}</div>
+const Footer = ({ workTitle }: FooterProps): JSX.Element => {
+  const classes = useStyles()
+  return(
+  <div className={classes.container}>
+    <div className={classes.heading}>{workTitle}</div>
   </div>
-);
+)};
 
 Footer.defaultProps = {
   workTitle: null,
