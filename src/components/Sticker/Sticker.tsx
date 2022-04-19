@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { stickerPropTypes } from '../../actions';
-import styles from './Sticker.module.scss';
+import useStyles from './StickerStyles';
 
 const propTypes = {
   sticker: stickerPropTypes.isRequired,
@@ -9,10 +9,12 @@ const propTypes = {
 
 type StickerProps = PropTypes.InferProps<typeof propTypes>;
 
-const Sticker = ({ sticker }: StickerProps): JSX.Element => (
+const Sticker = ({ sticker }: StickerProps): JSX.Element => {
+  const classes = useStyles()  
+  return(
   <img
     loading='lazy'
-    className={styles['sticker']}
+    className={classes.sticker}
     src={sticker.image}
     alt='sticker'
     style={{
@@ -24,6 +26,6 @@ const Sticker = ({ sticker }: StickerProps): JSX.Element => (
       transform: `rotate(${sticker?.rotate || 0}deg)`,
     }}
   />
-);
+)};
 
 export default Sticker;

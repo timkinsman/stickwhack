@@ -1,4 +1,4 @@
 export const COLORS = {
-  majimaBlue: '#2a0fff',
-  majimaSand: '#fae5c2',
+  MAJIMA_BLUE: '#2a0fff',
+  MAJIMA_SAND: '#fae5c2',
 };

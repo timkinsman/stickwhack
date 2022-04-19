@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import $ from 'jquery';
-import styles from './NavLink.module.scss';
+import useStyles from './NavLinkStyles';
 
 const propTypes = {
   route: PropTypes.string.isRequired,
@@ -12,6 +12,7 @@ const propTypes = {
 type NavLinkProps = PropTypes.InferProps<typeof propTypes>;
 
 const NavLink = ({ route, label }: NavLinkProps) => {
+  const classes = useStyles();
   const location = useLocation();
 
   const handleOnClick = () =>
@@ -24,7 +25,7 @@ const NavLink = ({ route, label }: NavLinkProps) => {
 
   return location.pathname === route ? (
     /* eslint-disable */
-    <a onClick={handleOnClick} className={styles['selected']}>
+    <a onClick={handleOnClick} className={classes.selected}>
       {label}
     </a>
   ) : (

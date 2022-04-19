@@ -7,8 +7,8 @@ import $ from 'jquery';
 import { NotFound } from '../NotFound';
 import { setActiveWork } from '../../actions';
 import { works } from '../../context';
-import styles from './Work.module.scss';
 import { COLORS } from '../../Theme';
+import useStyles from './WorkStyles';
 
 const propTypes = {
   setActiveWork: PropTypes.func.isRequired,
@@ -17,13 +17,14 @@ const propTypes = {
 type WorkProps = PropTypes.InferProps<typeof propTypes>;
 
 const Work = ({ setActiveWork }: WorkProps): JSX.Element => {
+  const classes = useStyles();
   const { id } = useParams();
   const activeWork = works.find((work) => work.id === Number(id));
 
   useEffect(() => {
     return () => {
       setActiveWork(null);
-      $('body').css({ background: COLORS.majimaSand, color: COLORS.majimaBlue });
+      $('body').css({ background: COLORS.MAJIMA_SAND, color: COLORS.MAJIMA_BLUE });
     };
   }, [setActiveWork]);
 
@@ -36,10 +37,10 @@ const Work = ({ setActiveWork }: WorkProps): JSX.Element => {
 
   return (
     <div
-      className={`${styles['container']} global-fadein`}
+      className={`${classes.container} global-fadein`}
       style={{ color: activeWork?.theme?.color, paddingTop: '100px' }}
     >
-      <div className={styles['larger-title']}>{activeWork?.title}</div>
+      <div className={classes.largerTitle}>{activeWork?.title}</div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         <div style={{ padding: '0 50px' }}>
           <img

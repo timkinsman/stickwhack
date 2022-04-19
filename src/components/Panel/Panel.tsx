@@ -5,7 +5,7 @@ import { Sticker } from '../Sticker';
 import { stickerPropTypes, workPropsTypes } from '../../actions';
 import { ReactComponent as ArrowLeft } from '../../assets/icons/arrowLeft.svg';
 import { ReactComponent as ArrowRight } from '../../assets/icons/arrowRight.svg';
-import styles from './Panel.module.scss';
+import useStyles from './PanelStyles';
 
 const propTypes = {
   sticker: stickerPropTypes,
@@ -15,6 +15,7 @@ const propTypes = {
 type PanelProps = PropTypes.InferProps<typeof propTypes>;
 
 const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
+  const classes = useStyles()
   const [pagination, setPagination] = useState(0);
 
   const handleOnClick = (next: number) =>
@@ -23,33 +24,33 @@ const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
       : setPagination(next % work.carouselImages.length);
 
   return (
-    <div className={styles['container']}>
+    <div className={classes.container}>
       <div
-        className={styles['left']}
+        className={classes.left}
         style={{ background: work.theme.primary, color: work.theme.color }}
       >
         <Link to={`/work/${work.id}`} style={{ marginTop: 'auto' }}>
-          <img src={work.logo} alt='logo' className={styles['logo']} />
+          <img src={work.logo} alt='logo' className={classes.logo} />
         </Link>
-        <div className={styles['text-container']}>
-          <div className={styles['title']}>{work.category}</div>
-          <div className={styles['description']}>{work.shortDescription}</div>
+        <div className={classes.textContainer}>
+          <div className={classes.title}>{work.category}</div>
+          <div className={classes.description}>{work.shortDescription}</div>
         </div>
       </div>
 
-      <div className={styles['right']} style={{ background: work.theme.secondary }}>
+      <div className={classes.right} style={{ background: work.theme.secondary }}>
         {work.carouselImages.length > 1 && (
           <>
             <button
               type='button'
-              className={styles['button-left']}
+              className={classes.buttonLeft}
               onClick={() => handleOnClick(pagination - 1)}
             >
               <ArrowLeft />
             </button>
             <button
               type='button'
-              className={styles['button-right']}
+              className={classes.buttonRight}
               onClick={() => handleOnClick(pagination + 1)}
             >
               <ArrowRight />
@@ -58,7 +59,7 @@ const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
         )}
 
         <div
-          className={styles['carousel-wrapper']}
+          className={classes.carouselWrapper}
           style={{
             gridTemplateColumns: `repeat(${work.carouselImages.length}, 1fr)`,
             width: `${work.carouselImages.length * 100}%`,
@@ -66,8 +67,8 @@ const Panel = ({ work, sticker }: PanelProps): JSX.Element => {
           }}
         >
           {work.carouselImages.map((image) => (
-            <div key={image} className={styles['image-container']}>
-              <img className={styles['image']} alt='carousel' src={image} />
+            <div key={image} className={classes.imageContainer}>
+              <img className={classes.image} alt='carousel' src={image} />
             </div>
           ))}
         </div>

@@ -1,9 +1,11 @@
 import React from 'react';
 import $ from 'jquery';
 import smile from '../../assets/stickers/smile.png';
-import styles from './Banner.module.scss';
+import useStyles from './BannerStyles';
 
 const Banner = (): JSX.Element => {
+  const classes = useStyles()
+  
   const handleOnClick = (id: string) =>
     $('html,body').animate(
       {
@@ -13,24 +15,24 @@ const Banner = (): JSX.Element => {
     );
 
   return (
-    <div className={styles['outer-container']}>
-      <div className={styles['container']}>
-        <div className={styles['heading-container']}>
-          <div className={styles['heading']}>hello!</div>
+    <div className={classes.outerContainer}>
+      <div className={classes.container}>
+        <div className={classes.headingContainer}>
+          <div className={classes.heading}>hello!</div>
           {[...Array(8)].map(() => (
             <img
               alt='smile'
-              className={styles['smile']}
+              className={classes.smile}
               src={smile}
               style={{ animationDelay: `${Math.random()}s` }}
             />
           ))}
         </div>
-        <div className={styles['subheading']}>
+        <div className={classes.subheading}>
           my name is kesha (aka stickwhack){' '}
           <button
             type='button'
-            className={styles['button']}
+            className={classes.button}
             onClick={() => handleOnClick('#panel-container')}
           >
             i’m a graphic designer/illustrator
