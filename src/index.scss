@@ -6,14 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: '#fae5c2';
-  color: '#2a0fff';
+  background: #fae5c2;
+  color: #2a0fff;
 
   cursor: default;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 #root {
@@ -35,7 +31,7 @@ input[type='reset'] {
 a {
   text-decoration: none;
   cursor: pointer !important;
-  color: '#2a0fff';
+  color: #2a0fff;
   line-height: 44px;
   font-size: 30px;
 
@@ -66,7 +62,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: '#2a0fff'; /* color of the scroll thumb */
+  background-color: #2a0fff; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid orange; /* creates padding around scroll thumb */
 }

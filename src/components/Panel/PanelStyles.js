@@ -68,11 +68,6 @@ const useStyles = makeStyles(() => ({
     left: '0',
     height: '100%',
     objectFit: 'cover',
-    transition: 'transform 1s',
-    '&:hover': {
-      transform: 'scale(1.05)',
-      transition: 'transform 1s',
-    },
   },
 }));
 

@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
   button: {
     textAlign: 'left',
     '&:hover': {
-      color: COLORS.MAJIMA_SAND,
+      color: COLORS.MAJIMA_ORANGE,
     },
   },
   smile: {
